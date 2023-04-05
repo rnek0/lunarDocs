@@ -31,7 +31,6 @@ En complement peut être rechercher a faire des mindmaps mais je verrais plus ta
 Donc, bien que je ne sois pas forcement un super fan de Python voici mon choix du moment.
 
 
-
 ## Commandes de Mkdocs
 
 * `mkdocs new [dir-name]` - Create a new project.
