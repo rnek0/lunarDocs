@@ -12,13 +12,14 @@ Ces notes se trouvent ici : [rnek0's notes](http://127.0.0.1:8000/) "en local" l
 
 Les endroits ou j'apprends des choses peuvent être divers et variés.
 
-Cela peut être un pint de depart sur ma [page de liens](https//web.lunarviews.net/enlaces/)
+Cela peut être un point de depart sur ma [page de liens](https://web.lunarviews.net/enlaces/)
 
 ## Pourquoi ?
 
 Parce que je n'ai pas un cerveau musclé comme Schwarzenegger à l'époque de Conan le Barbare...
 
 Et bien, le sujet est toujours le même, il y en a qui préfèrent [Cherrytree](https://framalibre.org/content/cherrytree) ou bien [Obsidian](https://obsidian.md/) ou que sais je, le block notes avec l'explorateur et de la patience.  
+
 Bref, il me faut un bon système de prise de notes et je suis en phase de test; puis pour ne rien vous cacher mes prérequis sont :
 
 * il faut que le machin puisse générer des sites, voir des books 
@@ -26,10 +27,23 @@ Bref, il me faut un bon système de prise de notes et je suis en phase de test; 
 * que la mise à jour se fasse facilement, donc le workflow soit simple.
 * qu'on puisse customiser la chose tant qu'a faire et qu'on puisse fasse perso.
 
-En complement peut être rechercher a faire des mindmaps mais je verrais plus tard.
+En complement peut être rechercher a faire des mindmaps, mais je verrais plus tard.
 
-Donc, bien que je ne sois pas forcement un super fan de Python voici mon choix du moment.
+## Les tests
 
+Voici mes choix du moment, (en phase de test)
+
+Pour les blogs ou docs en ligne :
+
+* **Jekyll** avec md pour un blog simple <https://web.lunarviews.net>
+* **Hugo** avec md pour un blog simple 
+  - Mon theme (en travaux) <https://blog.lunarviews.net>
+  - Avec [hugo-ficurinia](https://gitlab.com/gabmus/hugo-ficurinia) <https://rnek0.srht.site/>
+* **Material for MkDocs** <https://rnek0.github.io/lunarDocs/>
+
+Pour les Jupyter notebooks (intéressant car je peux générer des pdf à la volée)
+
+* Tests en lisant des tutos <https://github.com/rnek0/TSbook>
 
 ## Commandes de Mkdocs
 
