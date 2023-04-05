@@ -1,0 +1,65 @@
+site_name: rnek0's notes
+site_url: https://rnek0.sr.ht/
+site_description: Notes d'aprentissage 
+site_author: rnek0
+
+theme:
+    name: material
+    logo: assets/lune.png
+    nav_style: dark
+    features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    language: fr
+
+    palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode    
+      primary: teal
+      accent: purple
+
+    shortcuts:
+      help: 188    # ?
+      next: 78     # n
+      previous: 80 # p
+      search: 83   # s
+
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+        - bash
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/rnek0
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/netapau
+    - icon: fontawesome/brands/mastodon
+      link: https://mamot.fr/@oggy
+
+nav:
+    - lunarviews: index.md
+    - 'Tiers 0':
+      - fawn: 'tiers0/fawn.md'
+      - meow: 'tiers0/meow.md'
+    - About: read.md
