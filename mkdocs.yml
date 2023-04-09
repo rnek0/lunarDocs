@@ -60,6 +60,15 @@ extra:
 nav:
     - lunarviews: index.md
     - 'Tiers 0':
-      - fawn: 'tiers0/fawn.md'
-      - meow: 'tiers0/meow.md'
-    - About: read.md
+      - Meow: 'tiers0/meow.md'
+      - Fawn: 'tiers0/fawn.md'
+    - 'Tiers 1':
+      - Appointment: 'tiers1/appointment.md'
+      - Sequel: 'tiers1/sequel.md'
+    - 'Tiers 2':
+      - Archetype: 'tiers2/archetype.md'
+      - Oopsie: 'tiers2/oopsie.md'
+    - 'Réseau':
+      - IP: 'redes/ip.md'
+      - MAC: 'redes/mac.md'
+    - About: about.md
