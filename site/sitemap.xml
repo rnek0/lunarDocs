@@ -2,52 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://rnek0.sr.ht/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.sr.ht/about/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.sr.ht/redes/ip/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.sr.ht/redes/mac/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://rnek0.sr.ht/tiers0/dancing/</loc>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.sr.ht/tiers0/fawn/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.sr.ht/tiers0/meow/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.sr.ht/tiers1/appointment/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.sr.ht/tiers1/sequel/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.sr.ht/tiers2/archetype/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.sr.ht/tiers2/oopsie/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
