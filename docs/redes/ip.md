@@ -25,35 +25,16 @@ Inicialmente se denominaba 'Dirección Internet', esta compuesta por una direcci
 Ejemplo de conversion de una dirección IP (192.168.0.1) de decimal hacia binario :
 
 ```bash
-#!/usr/bin/bash
-# Convert IPv4 to bin
-
-if [ $# != 1 ]; then
-  echo -e "\n [!] This script needs an IPv4 address";
-  echo
-  exit 0
-fi
-
-blue_color=$(printf '\033[34m')
-red_color=$(printf '\033[31m')
-reset_color=$(printf '\033[m')
-return_value=""
-max=255
-min=0
-ipv4="${1}"
-
 ❯ echo "$(echo "obase=2; 192" | bc | numfmt --format=%08f).$(echo "obase=2; 168" | bc | numfmt --format=%08f).$(echo "obase=2; 0" | bc | numfmt --format=%08f).$(echo "obase=2; 1" | bc | numfmt --format=%08f)"
 11000000.10101000.00000000.00000001
 ```
 
-Un script para tenerlo mas a mano.
-
-<script src="https://gist.github.com/rnek0/2152fd058edd7a97af2a4b1688761937.js"></script>
+[Un script para tenerlo mas a mano](https://gist.github.com/rnek0/2152fd058edd7a97af2a4b1688761937)
 
 Referencia en el RFC inicial : 
 
 ## Dirección Internet
-<a name="Dirección+Internet"></a>
+
 
 >  Una dirección de origen o destino de 4 octetos (32 bits) en la version IPv4
 
@@ -61,6 +42,11 @@ Véase también :
 
 * en [Pág. 8] de [la RFC 791 de INTERNET PROTOCOL](https://www.rfc-es.org/rfc/rfc0791-es.txt)
 * [RFC1180: Un tutorial de TCP/IP (en español)](https://www.rfc-es.org/rfc/rfc1180-es.txt)  
+
+<a name="Dirección+Internet"></a>
+
+---
+
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
