@@ -1,5 +1,9 @@
-:root {
-    --md-primary-fg-color:        #EE0F0F;
-    --md-primary-fg-color--light: #ECB7B7;
-    --md-primary-fg-color--dark:  #90030C;
+[data-md-color-scheme="lunarviews"] {
+    --md-primary-fg-color:        #0b5b85;
+    --md-primary-fg-color--light: #1a91b2da;
+    --md-primary-fg-color--dark:  #0c1e39be;
+  }
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 210; 
   }

@@ -1,6 +1,66 @@
-# Direcciones IP
+# El protocolo IP
 
-Una dirección IP (del inglés, Internet Protocol) es una etiqueta numérica que identifica de manera lógica y jerárquica a una interfaz —habitualmente un dispositivo (computadora, laptop, teléfono inteligente)— [conectada a la red](https://es.wikipedia.org/wiki/Red_de_computadoras), que utilice el protocolo de internet o que corresponda al nivel de red del modelo TCP/IP.  
+Un **protocolo de comunicaciones** es un sistema de reglas que permiten que dos o más entidades (computadoras, teléfonos celulares, etc.) de un sistema de comunicación se comuniquen entre ellas para transmitir información.
+
+**Comunicar consiste en transmitir información**, pero mientras los interlocutores no le atribuyan un significado, son solo datos y no información. Por lo tanto, los interlocutores deben no solo **hablar un idioma común**, sino también **dominar las reglas mínimas para transmitir y recibir datos**. El papel de un protocolo es asegurarse de todo esto.
+
+## El papel del protocolo IP
+
+El protocolo IP es parte de la capa de Internet del [conjunto de protocolos TCP/IP](https://es.wikipedia.org/wiki/Familia_de_protocolos_de_internet). Es uno de los protocolos más importantes de Internet porque permite el desarrollo y transporte de **datagramas IP (paquetes de datos)** , sin asegurar su "entrega". De hecho, el protocolo IP trata los datagramas IP independientemente unos de otros definiendo su representación, enrutamiento y reenvío.  
+
+El protocolo IP es el protocolo que **permite identificar las máquinas y enrutar la información a través de Internet**.
+
+El protocolo IP determina el destinatario del mensaje mediante 3 campos:
+
+- El campo de **dirección IP**: dirección de la máquina. En IPv4 **4 octetos** (32bits) representados en decimal y separados por puntos. 
+- El campo de **máscara de subred**: una máscara de subred permite que el protocolo IP determine la **parte de la dirección IP que concierne a la red**
+- El campo de puerta de enlace predeterminada: permite que el protocolo de Internet sepa a qué máquina entregar el datagrama si la máquina de destino no está en la red local.
+
+## Direcciones IP
+
+[Una dirección IP](#Dirección+Internet) (del inglés, Internet Protocol) es una etiqueta numérica que identifica de manera lógica y jerárquica a [una interfaz](https://en.wikipedia.org/wiki/Interface_(computing)) —habitualmente un dispositivo (computadora, laptop, teléfono inteligente)— [conectada a la red](https://es.wikipedia.org/wiki/Red_de_computadoras), que utilice el protocolo de internet o que corresponda al nivel de red del modelo TCP/IP.  
+
+Inicialmente se denominaba 'Dirección Internet', esta compuesta por una dirección de 32bits (4 octetos)
+
+Ejemplo de conversion de una dirección IP (192.168.0.1) de decimal hacia binario :
+
+```bash
+#!/usr/bin/bash
+# Convert IPv4 to bin
+
+if [ $# != 1 ]; then
+  echo -e "\n [!] This script needs an IPv4 address";
+  echo
+  exit 0
+fi
+
+blue_color=$(printf '\033[34m')
+red_color=$(printf '\033[31m')
+reset_color=$(printf '\033[m')
+return_value=""
+max=255
+min=0
+ipv4="${1}"
+
+❯ echo "$(echo "obase=2; 192" | bc | numfmt --format=%08f).$(echo "obase=2; 168" | bc | numfmt --format=%08f).$(echo "obase=2; 0" | bc | numfmt --format=%08f).$(echo "obase=2; 1" | bc | numfmt --format=%08f)"
+11000000.10101000.00000000.00000001
+```
+
+Un script para tenerlo mas a mano.
+
+<script src="https://gist.github.com/rnek0/2152fd058edd7a97af2a4b1688761937.js"></script>
+
+Referencia en el RFC inicial : 
+
+## Dirección Internet
+<a name="Dirección+Internet"></a>
+
+>  Una dirección de origen o destino de 4 octetos (32 bits) en la version IPv4
+
+Véase también : 
+
+* en [Pág. 8] de [la RFC 791 de INTERNET PROTOCOL](https://www.rfc-es.org/rfc/rfc0791-es.txt)
+* [RFC1180: Un tutorial de TCP/IP (en español)](https://www.rfc-es.org/rfc/rfc1180-es.txt)  
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -454,4 +514,4 @@ Una dirección IP (del inglés, Internet Protocol) es una etiqueta numérica que
       </g>
     </a>
   </g>
-</svg>
+</svg>  

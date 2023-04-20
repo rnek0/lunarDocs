@@ -1,11 +1,14 @@
 site_name: rnek0's notes
-site_url: https://rnek0.sr.ht/
+site_url: https://rnek0.github.io/lunarDocs/
 site_description: Notes d'aprentissage 
 site_author: rnek0
 
 theme:
     name: material
+    custom_dir: docs/overrides
     logo: assets/lune.png
+    language: fr
+    favicon: img/favicon.ico
     nav_style: dark
     features:
     - navigation.tabs
@@ -17,46 +20,60 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-    language: fr
+    - navigation.footer
 
     palette:
-    - scheme: default
+    # Palette toggle for light mode
+    # Couleurs perso dans extra.css
+    - scheme: lunarviews
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-      primary: teal
-      accent: purple 
+      #primary: teal
+      #accent: purple 
+    # Palette toggle for dark mode
     - scheme: slate 
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode    
-      primary: teal
-      accent: purple
+      #primary: teal
+      #accent: purple
 
     shortcuts:
       help: 188    # ?
       next: 78     # n
       previous: 80 # p
       search: 83   # s
+      
+# Extensions
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
-    highlightjs: true
-    hljs_languages:
-        - yaml
-        - rust
-        - bash
-
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+  - javascripts/extra.js
 extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
   - stylesheets/extra.css
 
+# Bottom social icons
 extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/rnek0
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/netapau
     - icon: fontawesome/brands/mastodon
       link: https://mamot.fr/@oggy
 
+# Navigation
 nav:
     - lunarviews: index.md
     - 'Tiers 0':
@@ -68,7 +85,7 @@ nav:
     - 'Tiers 2':
       - Archetype: 'tiers2/archetype.md'
       - Oopsie: 'tiers2/oopsie.md'
-    - 'Réseau':
+    - 'Redes':
       - IP: 'redes/ip.md'
       - MAC: 'redes/mac.md'
     - About: about.md
