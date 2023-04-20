@@ -17,14 +17,14 @@ Los códigos de la dirección MAC tienen un significado :
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="203.54251mm"
+   height="112.47204mm"
+   viewBox="0 0 203.54251 112.47204"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="MAC.svg"
-   inkscape:export-filename="ip.svg"
+   inkscape:export-filename="addr_MAC.svg"
    inkscape:export-xdpi="66.1755"
    inkscape:export-ydpi="66.1755"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -56,17 +56,17 @@ Los códigos de la dirección MAC tienen un significado :
        type="xygrid"
        id="grid7946" />
     <sodipodi:guide
-       position="104.8805,158.40792"
+       position="99.952485,-15.877225"
        orientation="1,0"
        id="guide7948"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="158.31961,191.37036"
+       position="153.39159,17.085215"
        orientation="1,0"
        id="guide7950"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="66.954147,236.3046"
+       position="62.026132,62.019455"
        orientation="1,0"
        id="guide7952"
        inkscape:locked="false" />
@@ -112,70 +112,12 @@ Los códigos de la dirección MAC tienen un significado :
          offset="1"
          id="stop1200" />
     </linearGradient>
-    <symbol
-       id="ThoughtBalloon">
-      <title
-         id="title52224">Thought Balloon</title>
-      <path
-         d="M 170,60 C 152,46 119,49 108,67 76,48 51,103 86,123 c -30,10 -30,50 3,57 -2,30 53,29 59,8 10,23 47,29 60,9 14,10 36,5 43,-9 11,25 41,21 50,1 35,4 40,-31 29,-50 24,-9 22,-39 3,-48 C 349,65 316,33 294,62 281,47.7 247,48 238,63 222,44 185,42 170,60 Z"
-         style="stroke:none"
-         id="path52226" />
-      <path
-         d="M 165,55 C 147,41 114,44 103,62 71,43 46,98 81,118 c -30,10 -30,50 3,57 -2,30 53,29 59,8 10,23 47,29 60,9 14,10 36,5 43,-9 11,25 41,21 50,1 35,4 40,-31 29,-50 24,-9 22,-39 3,-48 C 344,60 311,28 289,57 276,42.7 242,43 233,58 217,39 180,37 165,55 Z"
-         style="fill:#eeeeee;stroke-width:3.5"
-         id="path52228" />
-      <path
-         d="M 163,58 C 146,46 115,47 105,64 68,50 59,106 88,117 c -33,14 -20,48 2,50 -5,29 47,29 53,7 10,25 43,24 58,8 13,9 34,4 40,-8 10,22 41,19 48,1 31,7 37,-28 27,-43 23,-7 21,-38 3,-46 C 333,60 304,34 289,64 270,48.4 246,41 230,63 215,43 179,40 163,58 Z"
-         style="fill:#ffffff;stroke:none"
-         id="path52230" />
-      <ellipse
-         cx="117"
-         cy="239"
-         rx="30"
-         ry="21"
-         style="stroke:none"
-         id="ellipse52232" />
-      <ellipse
-         cx="113"
-         cy="235"
-         rx="30"
-         ry="21"
-         style="fill:#eeeeee;stroke-width:3.5"
-         id="ellipse52234" />
-      <ellipse
-         cx="110"
-         cy="233"
-         rx="23"
-         ry="17"
-         style="fill:#ffffff;stroke:none"
-         id="ellipse52236" />
-      <ellipse
-         cx="74"
-         cy="275"
-         rx="15"
-         ry="11"
-         style="stroke:none"
-         id="ellipse52238" />
-      <ellipse
-         cx="70"
-         cy="271"
-         rx="15"
-         ry="11"
-         style="fill:#eeeeee;stroke-width:3.5"
-         id="ellipse52240" />
-      <ellipse
-         cx="67"
-         cy="269"
-         rx="8"
-         ry="7"
-         style="fill:#ffffff;stroke:none"
-         id="ellipse52242" />
-    </symbol>
   </defs>
   <g
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-4.9280153,-10.242818)">
     <rect
        style="fill:#aaccff;fill-opacity:1;stroke:#002255;stroke-width:0.349699;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.909804;image-rendering:auto"
        id="rect24128"
@@ -333,3 +275,15 @@ Los códigos de la dirección MAC tienen un significado :
          y="91.551727">91:75:1a:ec:9a:c7</tspan></text>
   </g>
 </svg>
+
+
+
+---
+
+## Documentacion adicional
+
+Estos temas se contemplan en : 
+
+* [hack4u](https://hack4u.io/cursos/introduccion-al-hacking/) Introducción al Hacking.
+* [THM](https://tryhackme.com/room/nmap01) sobre nmap scan.
+  
