@@ -86,6 +86,8 @@ nav:
       - Archetype: 'tiers2/archetype.md'
       - Oopsie: 'tiers2/oopsie.md'
     - 'Redes':
-      - IP: 'redes/ip.md'
-      - MAC: 'redes/mac.md'
+      - 'Introduction au reseau': 'redes/intro.md'
+      - 'Dirección IP': 'redes/ip.md'
+      - 'Dirección MAC': 'redes/mac.md'
+      - 'Algunos protocolos': 'redes/protocolos.md'
     - About: about.md
