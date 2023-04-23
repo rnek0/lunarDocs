@@ -30,3 +30,4 @@ L'existence du fichier .flag pour les CTF
 * [Module Setting Up](https://academy.hackthebox.eu/module/details/87)
 * [Introduction to Pwnbox](https://help.hackthebox.eu/en/articles/5185608-gs-introduction-to-pwnbox) : distribution personnalisée en ligne Linux de [Parrot Security](https://www.parrotsec.org/)
 * [Module Linux Fundamentals](https://academy.hackthebox.com/module/details/18)
+* [Videos de Plaintext](https://www.youtube.com/watch?v=CEbnHhXp7wQ)

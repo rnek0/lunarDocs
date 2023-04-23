@@ -1,4 +1,5 @@
-## Dancing
+# Dancing
 
-![Dancing](img/Dancing.png)
+![Dancing](../img/Dancing.png)
 
+...
