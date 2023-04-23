@@ -1,32 +1,27 @@
-# Tiers 0 - Machines HTB
+# About
 
-Voici quelques notes sur les machines du module  *STARTING POINT*
+Algunos de mis apuntes sobre ordenadores, redes y pentest o hacking ético. Principalmente en castellano, francés o ingles. Sin embargo intento poner en español lo mas posible para no olvidar el idioma, e igualmente porque estoy en comunidades de habla hispana.
 
+## Estructura de los apuntes
 
- 
-## Fawn
+Los apuntes sobre redes están estructurados en gran parte alrededor del temario del [curso de introducción al hacking](https://hack4u.io/cursos/introduccion-al-hacking/) de **la academia hack4u** pero también otros recursos, los enlaces serán utilizados cada vez que sea necesario o conveniente por temas de cortesía y reconocimiento; algunos serán gratuitos y otros de pago, aunque el saber debería ser gratuito se comprende que los creadores de contenido y los profesores deben ser remunerados. Es lo mínimo que se puede hacer para respetar la [Netiqueta](https://es.wikipedia.org/wiki/Netiqueta).
 
-![Fawn](img/Fawn.png)
+Los tiers vienen de [HTB](https://app.hackthebox.com/ "HackTheBox"), maquinas simples para empezar en el pentesting. 
 
-**Fawn** propose une introduction au service [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) 
+Por mi parte todo esto hace parte de mi aprendizaje y si le puede servir à alguien para ello en algún punto, ese es el propósito para el que esta echo.
 
-Elle couvre :
+Si desea seguir à los enlaces y quedarse por aquí no olvide el **ctrl + click sobre el link** para obtener otra pestaña en el navegador.
 
-* La connection avec **openvpn**
-* Les bases de l'**Enumeration **
-* Les bases du service **telnet**
+<!-- <script src="https://gist.github.com/rnek0/7c67466fe32bca9aa8fb752bb7a83cd1.js"></script> -->
 
-## Dancing
+---
 
-![Dancing](img/Dancing.png)
+Enlaces :
 
-## Redeemer
+* Mi [blog](https://web.lunarviews.net)
+* Mi cuenta en [github](https://github.com/rnek0)
+* Mi cuenta en [Mastodon](https://mamot.fr/@oggy)
 
-## Explosion
+---
 
-## Preignition
-
-## Mongod
-
-## Sinced
 

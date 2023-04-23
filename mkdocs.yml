@@ -79,6 +79,12 @@ nav:
     - 'Tiers 0':
       - Meow: 'tiers0/meow.md'
       - Fawn: 'tiers0/fawn.md'
+      - Dancing: 'tiers0/dancing.md'
+      - Redeemer: 'tiers0/redeemer.md'
+      - Explosion: 'tiers0/explosion.md'
+      - Preignition: 'tiers0/preignition.md'
+      - Mongod: 'tiers0/mongod.md'
+      - Sinced: 'tiers0/sinced.md'
     - 'Tiers 1':
       - Appointment: 'tiers1/appointment.md'
       - Sequel: 'tiers1/sequel.md'
@@ -87,7 +93,8 @@ nav:
       - Oopsie: 'tiers2/oopsie.md'
     - 'Redes':
       - 'Introduction au reseau': 'redes/intro.md'
-      - 'Dirección IP': 'redes/ip.md'
+      - 'IP': 'redes/ip.md'
       - 'Dirección MAC': 'redes/mac.md'
       - 'Algunos protocolos': 'redes/protocolos.md'
+      - 'Modelo OSI': 'redes/modeloOSI.md'
     - About: about.md

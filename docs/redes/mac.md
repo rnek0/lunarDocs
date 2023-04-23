@@ -1,10 +1,11 @@
 # Direcciones MAC
 
-Las direcciones MAC **identifican una tarjeta o dispositivo de Red** (oficialmente llamada "MAC-48")
+Las direcciones MAC **identifican una tarjeta o dispositivo de Red**  ( **M** edia **A** ccess **C** ontrol ), oficialmente llamada "MAC-48"
 
-Se codifican en hexadecimal con 6 pares de 2 cifras hexadecimales separados por ':' (dos puntos) y en teoría se trata de un identificador único para una tarjeta de red. Se puede considerar como si fuera una huella digital pero en la practica veamos como se puede cambiar : aunque ninguna otra tarjeta tenga el mismo, es la capa de sistema operativo la que gestiona y distribuye en la red, con lo que se puede modificar la dirección MAC que identifica la interfaz de red. Esta práctica es conocida como MAC spoofing. Un ejemplo de tool para ello es [macchanger](https://github.com/alobbs/macchanger), se pueden encontrar otros recursos como por ejemplo [aquí](https://www.ionos.mx/digitalguide/servidores/know-how/que-es-el-mac-spoofing/)  
-Las direcciones mac pueden servir igualmente para **filtrar los hosts** con permisos en una red por los administradores.
+Se codifican en hexadecimal con 6 pares de 2 cifras hexadecimales separados por ':' (dos puntos) y en teoría se trata de un identificador único para una tarjeta de red definido por su fabricante. Se puede considerar como si fuera una huella digital pero en la practica veamos como se puede cambiar : aunque ninguna otra tarjeta tenga el mismo, es la capa de sistema operativo la que gestiona y distribuye en la red, con lo que se puede modificar la dirección MAC que identifica la interfaz de red. Esta práctica es conocida como MAC spoofing. Un ejemplo de tool para ello es [macchanger](https://github.com/alobbs/macchanger), se pueden encontrar otros recursos como por ejemplo [aquí](https://www.ionos.mx/digitalguide/servidores/know-how/que-es-el-mac-spoofing/)  
+Las direcciones mac pueden servir igualmente para **filtrar los hosts** y atribuir permisos en una red por los administradores. Supongamos que conseguimos modificar la nuesta para que sea la misma que la de alguien que tenga acceso a un servicio y nosotros no...
 
+Un poco de numeración :  
 2 cifras hexadecimales son un byte en binario (ocho bits o un octeto) Ejemplo [Hexa -> Decimal -> Binario]: FF = 255 = 11111111 
 
 Los códigos de la dirección MAC tienen un significado :

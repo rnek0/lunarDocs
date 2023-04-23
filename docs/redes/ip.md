@@ -6,19 +6,20 @@ Un **protocolo de comunicaciones** es un sistema de reglas que permiten que dos 
 
 ## El papel del protocolo IP
 
-El protocolo IP es parte de la capa de Internet del [conjunto de protocolos TCP/IP](https://es.wikipedia.org/wiki/Familia_de_protocolos_de_internet). Es uno de los protocolos más importantes de Internet porque permite el desarrollo y transporte de **datagramas IP (paquetes de datos)** , sin asegurar su "entrega". De hecho, el protocolo IP trata los datagramas IP independientemente unos de otros definiendo su representación, enrutamiento y reenvío.  
+[El protocolo IP](https://es.wikipedia.org/wiki/Protocolo_de_internet) (no confundir con dirección ip), es parte de la capa de Internet del [conjunto de protocolos TCP/IP](https://es.wikipedia.org/wiki/Familia_de_protocolos_de_internet) que "no es un estándar estricto, como lo es el [modelo OSI de ISO](../modeloOSI/)". Es uno de los protocolos más importantes de Internet porque permite el desarrollo y transporte de **datagramas IP (paquetes de datos)** , sin asegurar su "entrega". De hecho, el protocolo IP trata los datagramas IP independientemente unos de otros definiendo su representación, enrutamiento y reenvío.  
 
-El protocolo IP es el protocolo que **permite identificar las máquinas y enrutar la información a través de Internet**.
+El protocolo IP es el protocolo que ```permite identificar las máquinas y enrutar la información a través de Internet```.  
+Protocolo de comunicación de datos digitales clasificado funcionalmente en la capa de red según el modelo internacional OSI. 
 
 El protocolo IP determina el destinatario del mensaje mediante 3 campos:
 
 - El campo de **dirección IP**: dirección de la máquina. En IPv4 **4 octetos** (32bits) representados en decimal y separados por puntos. 
 - El campo de **máscara de subred**: una máscara de subred permite que el protocolo IP determine la **parte de la dirección IP que concierne a la red**
-- El campo de puerta de enlace predeterminada: permite que el protocolo de Internet sepa a qué máquina entregar el datagrama si la máquina de destino no está en la red local.
+- El campo de puerta de enlace predeterminada: "nodo que sirve como enlace entre dos redes informáticas" que permite que el protocolo de Internet sepa a qué máquina entregar el datagrama si la máquina de destino no está en la red local.
 
 ## Direcciones IP
 
-[Una dirección IP](#Dirección+Internet) (del inglés, Internet Protocol) es una etiqueta numérica que identifica de manera lógica y jerárquica a [una interfaz](https://en.wikipedia.org/wiki/Interface_(computing)) —habitualmente un dispositivo (computadora, laptop, teléfono inteligente)— [conectada a la red](https://es.wikipedia.org/wiki/Red_de_computadoras), que utilice el protocolo de internet o que corresponda al nivel de red del modelo TCP/IP.  
+[Una dirección IP](#Dirección+Internet) (del inglés, Internet Protocol) es una ```etiqueta numérica que identifica de manera lógica y jerárquica``` a [una interfaz](https://en.wikipedia.org/wiki/Interface_(computing)) —habitualmente un dispositivo (computadora, laptop, teléfono inteligente)— conectada a [la red](https://es.wikipedia.org/wiki/Red_de_computadoras), que utilice el protocolo de internet o que corresponda al nivel de red del modelo TCP/IP.  
 
 Inicialmente se denominaba 'Dirección Internet', esta compuesta por una dirección de 32bits (4 octetos)
 
@@ -31,17 +32,21 @@ Ejemplo de conversion de una dirección IP (192.168.0.1) de decimal hacia binari
 
 [Un script para tenerlo mas a mano](https://gist.github.com/rnek0/2152fd058edd7a97af2a4b1688761937)
 
-Referencia en el RFC inicial : 
+ 
 
-## Dirección Internet
+### Dirección Internet vs URL
 
+La dirección IP fué llamada dirección internet en la especificación inicial, actualmente (por extension de lenguaje) es común llamar dirección internet al sitio donde esta un recurso, pero no hay que confundir IP con [URL](https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme) (uniform resource locator) por ejemplo (con el protocolo http o https).
 
->  Una dirección de origen o destino de 4 octetos (32 bits) en la version IPv4
+>  **Dirección Internet** : una dirección de origen o destino de 4 octetos (32 bits) en la version IPv4 que ```identifica una maquina o interfaz (hardware)```  
 
-Véase también : 
+>  **URL** : gracias al protocolo DNS el URL corresponderá con una dirección IP pero se busca un recurso que sera servido por una aplicación (servidor) que puede igualmente servir recursos de otras maquinas (proxy). ```Se solicitan datos (Software)```
+
+Véase también algunas referencias en los [RFC](https://es.wikipedia.org/wiki/Request_for_Comments) : 
 
 * en [Pág. 8] de [la RFC 791 de INTERNET PROTOCOL](https://www.rfc-es.org/rfc/rfc0791-es.txt)
-* [RFC1180: Un tutorial de TCP/IP (en español)](https://www.rfc-es.org/rfc/rfc1180-es.txt)  
+* [RFC1180: Un tutorial de TCP/IP (en español)](https://www.rfc-es.org/rfc/rfc1180-es.txt) que no te puedes perder ! si quieres profundizar en el tema.  
+  El mismo en [FR] pero en [pdf](http://abcdrfc.free.fr/rfc-vf/pdf/rfc1122.pdf). 
 
 <a name="Dirección+Internet"></a>
 
@@ -446,3 +451,40 @@ Véase también :
 
 ---
 
+## IP Datagram header
+
+El [encabezado IP](https://es.wikipedia.org/wiki/Cabecera_IP) muestra los bits y para que sirven, podemos apreciar las 2 direcciones (origen y destino), el TTL y une Checksum para verificar el estado (por ejemplo)  
+
+Un consejo, aunque leas los articulos en wikipedia en tu idioma, pasate por los que esten en inglés porque, a menudo la informacion puede ser mas precisa; por ejemplo :
+
+**An IP header is header information at the beginning of an Internet Protocol (IP) packet.** An IP packet is the smallest message entity exchanged via the Internet Protocol across an IP network. ```IP packets consist of a header for addressing and routing, and a payload for user data```. The header contains information about IP version, source IP address, destination IP address, time-to-live, etc. The payload of an IP packet is typically a datagram or segment of the higher-level transport layer protocol, but may be data for an internet layer (e.g., ICMP or ICMPv6) or link layer (e.g., OSPF) instead. 
+
+```
+3.1.  Internet Header Format
+
+  A summary of the contents of the internet header follows:
+
+                                    
+    0                   1                   2                   3   
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |Version|  IHL  |Type of Service|          Total Length         |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |         Identification        |Flags|      Fragment Offset    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |  Time to Live |    Protocol   |         Header Checksum       |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                       Source Address                          |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Destination Address                        |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Options                    |    Padding    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+                    Example Internet Datagram Header
+
+                               Figure 4.
+
+  Note that each tick mark represents one bit position.
+```  
+Ver la [RFC 791](https://www.ietf.org/rfc/rfc791.txt)

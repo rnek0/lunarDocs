@@ -2,7 +2,7 @@
 
 Los protocolos mas comunes son el TCP o UDP pero hay muchos mas que se utilizan la pila OSI.
 
-* **TCP** (Transmission Control Protocol) orientado a conexión, en la capa de "transport" 
+* **TCP** (Transmission Control Protocol) orientado a conexión, en la capa de "transporte" 
 * **UDP** (User Datagram Protocol) **no orientado a conexión** y no ofrece control de errores.
 
 ## Les caractéristiques du protocole TCP
@@ -52,11 +52,11 @@ cf: [RFC 9293](https://datatracker.ietf.org/doc/html/rfc9293)
 
 * 21: [FTP](https://fr.wikipedia.org/wiki/File_Transfer_Protocol) (File Transfer Protocol) – permite la transferencia de archivos entre sistemas.
 * 22: [SSH](https://fr.wikipedia.org/wiki/Secure_Shell) (Secure Shell) – un protocolo de red seguro que permite a los usuarios conectarse y administrar sistemas de forma remota.
-    - [Bandit lvl 13](https://overthewire.org/wargames/bandit/bandit14.html)
+    - Cf: [Bandit lvl 13](https://overthewire.org/wargames/bandit/bandit14.html)
 * 23: [Telnet](https://fr.wikipedia.org/wiki/Telnet) – un protocolo utilizado para la conexión remota a dispositivos de red.
-    - [Meow (HTB)](/lunarDocs/tiers0/meow/) 
+    - Cf: [Meow (HTB)](/lunarDocs/tiers0/meow/) 
 * 80: [HTTP](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol) (Hypertext Transfer Protocol) – el protocolo que se utiliza para la transferencia de datos en la World Wide Web.
-* 443: [HTTPS](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure) (Hypertext Transfer Protocol Secure) – la versión segura de HTTP, que utiliza encriptación SSL/TLS para proteger las comunicaciones web.
+* 443: [HTTPS](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure) (Hypertext Transfer Protocol Secure) – la versión segura de HTTP, que utiliza encriptación [SSL](https://fr.wikipedia.org/wiki/Transport_Layer_Security)/TLS para proteger las comunicaciones web.
 
 ## Les caractéristiques du protocole UDP
 
@@ -81,10 +81,10 @@ L'en-tête du segment UDP est donc très simple : voir sur la [RFC 768](https://
 
 ### Puertos UDP comunes:
 
-* 53: DNS (Domain Name System) – un sistema que traduce nombres de dominio en direcciones IP.
-* 67/68: DHCP (Dynamic Host Configuration Protocol) – un protocolo utilizado para asignar direcciones IP y otros parámetros de configuración a los dispositivos en una red.
-* 69: TFTP (Trivial File Transfer Protocol) – un protocolo simple utilizado para transferir archivos entre dispositivos en una red.
-* 123: NTP (Network Time Protocol) – un protocolo utilizado para sincronizar los relojes de los dispositivos en una red.
-* 161: SNMP (Simple Network Management Protocol) – un protocolo utilizado para administrar y supervisar dispositivos en una red.
+* 53: [DNS](https://es.wikipedia.org/wiki/Sistema_de_nombres_de_dominio) (Domain Name System) – un sistema que traduce nombres de dominio en direcciones IP.
+* 67/68: [DHCP](https://es.wikipedia.org/wiki/Protocolo_de_configuraci%C3%B3n_din%C3%A1mica_de_host) (Dynamic Host Configuration Protocol) – un protocolo utilizado para asignar direcciones IP y otros parámetros de configuración a los dispositivos en una red.
+* 69: [TFTP](https://es.wikipedia.org/wiki/TFTP) (Trivial File Transfer Protocol) – un protocolo simple utilizado para transferir archivos entre dispositivos en una red.
+* 123: [NTP](https://es.wikipedia.org/wiki/Network_Time_Protocol) (Network Time Protocol) – un protocolo utilizado para sincronizar los relojes de los dispositivos en una red.
+* 161: [SNMP](https://es.wikipedia.org/wiki/Protocolo_simple_de_administraci%C3%B3n_de_red) (Simple Network Management Protocol) – un protocolo utilizado para administrar y supervisar dispositivos en una red.
 
 
