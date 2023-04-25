@@ -30,7 +30,7 @@ Podemos pues decir que nuestra mascara de red en binario es :
 
 11111111.11111111.11111111.00000000
 
-De la misma manera podemos convertir nuestra dirección ip de decimal a binario :
+De la misma manera podemos convertir nuestra dirección ip de decimal a binario con [esta utilidad](https://gist.github.com/rnek0/2152fd058edd7a97af2a4b1688761937 "Convert IPv4 to bin") :
 
 11000000.10101000.00000001.00010000
 
