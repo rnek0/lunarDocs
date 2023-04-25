@@ -23,6 +23,11 @@ El modelo OSI está **conformado por 7 capas** o niveles de abstracción.
 
 ---
 
+![Modelo OSI](../assets/OSI_Model_v1.svg.png "Modelo OSI")  
+Image from [wikimedia](https://commons.wikimedia.org/wiki/File:OSI_Model_v1.svg?uselang=es)
+
+---
+
 Existe igualmente el [Modelo TCP/IP](https://es.wikipedia.org/wiki/Modelo_TCP/IP)
 
 TCP/IP es un conjunto de protocolos que permiten la comunicación entre los ordenadores pertenecientes a una red. La sigla TCP/IP significa Protocolo de control de transmisión/Protocolo de Internet. Proviene de los nombres de dos protocolos importantes incluidos en el conjunto TCP/IP, es decir, del protocolo TCP y del protocolo IP.

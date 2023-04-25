@@ -488,3 +488,5 @@ Un consejo, aunque leas los articulos en wikipedia en tu idioma, pasate por los 
   Note that each tick mark represents one bit position.
 ```  
 Ver la [RFC 791](https://www.ietf.org/rfc/rfc791.txt)
+
+Se podría comparar un paquete IP con una pagina HTML, los dos tienen encabezado y contenido.

@@ -94,7 +94,9 @@ nav:
     - 'Redes':
       - 'Introduction au reseau': 'redes/intro.md'
       - 'IP': 'redes/ip.md'
+      - 'Puerto': 'redes/puertos.md'
       - 'Dirección MAC': 'redes/mac.md'
       - 'Algunos protocolos': 'redes/protocolos.md'
       - 'Modelo OSI': 'redes/modeloOSI.md'
+      - 'Subnetting': 'redes/subnetting.md'
     - About: about.md
