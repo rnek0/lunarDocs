@@ -1,6 +1,6 @@
 # Protocolos comunes
 
-Los protocolos mas comunes son el TCP o UDP pero hay muchos mas que se utilizan la pila OSI.
+Los protocolos mas comunes son el [TCP](https://fr.wikipedia.org/wiki/Transmission_Control_Protocol) o [UDP](https://fr.wikipedia.org/wiki/User_Datagram_Protocol) pero hay muchos mas que se utilizan la pila OSI.
 
 * **TCP** (Transmission Control Protocol) orientado a conexión, en la capa de "transporte" 
 * **UDP** (User Datagram Protocol) **no orientado a conexión** y no ofrece control de errores.

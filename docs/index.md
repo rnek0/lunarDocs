@@ -8,10 +8,12 @@ Voici des notes dans mon parcours d'apprentissage, ceci est purement perso mais 
 
 ou d'autres outils, au choix...
 
-Ces notes se trouvent ici : [rnek0's notes](http://127.0.0.1:8000/) "en local" lorsque je travaille dessus, avant de les poster sur un repos (ou pas).
+Ces notes se trouvent ici : 
 
-Les endroits ou j'apprends des choses peuvent être divers et variés.
+* [rnek0's notes - local](http://127.0.0.1:8000/) lorsque je travaille dessus.
+* [rnek0's notes - online](https://rnek0.github.io/lunarDocs/) sur le web.
 
+Les endroits ou j'apprends des choses peuvent être divers et variés.  
 Cela peut être un point de depart sur ma [page de liens](https://web.lunarviews.net/enlaces/)
 
 ## Pourquoi ?

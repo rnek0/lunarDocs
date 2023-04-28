@@ -8,9 +8,9 @@ A cada una de estas aplicaciones se le asigna una *dirección única en la máqu
 Un poco de numeración :
 
 * 1 bit = unidad atómica, (la mas pequeña unidad binaria que represente una información)
-* 1 octeto = 8 bits = 2 cifras en hexadecimal. Ejemplo de hex a bin : A = 1010 y 5 = 0101
+* 1 octeto = 8 bits = 2 cifras en hexadecimal. Ejemplo 'A5' [de hex a bin](https://converter.app/es/hex-a-binario/) : A = 1010 y 5 = 0101
 * 16 bits = 2 octetos = 4 cifras hexa
-* Puertos : 2 ^ 16 = **65536** en decimal
+* Puertos : 2¹⁶ = **65536** en decimal
 
 ## Cliente / Servidor
 
@@ -21,3 +21,23 @@ El número de puerto indica la aplicación para la que están destinados los dat
 * los números de puerto del 0 al 1023 corresponden a los puertos "bien conocidos", utilizados para los servicios de red más comunes
 * los números de puerto del 1024 al 49151 corresponden a puertos registrados, asignados por la IANA
 * los números de puerto del 49.152 al 65.535 corresponden a los puertos dinámicos, los cuales pueden ser utilizados para cualquier tipo de solicitudes TCP o UDP distintas a las mencionadas anteriormente.
+
+## Lista de los puertos mas comunes
+
+La [lista de puertos de la IANA](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml), organismo responsable de coordinar algunos de los elementos clave que hacen que Internet funcione sin problemas.
+
+Algunos puertos utilizados con el protocolo **TCP** 
+
+* 21 FTP *File transfert protocol*
+* 22 SSH *Secure Shell*  
+* 25 SMTP *Simple Mail Transfer Protocol*  
+* 80 HTTP *Hypertext Transfer Protocol*
+* 110 POP *Post Office Protocol* , SMTP
+* 139 NetBIOS 
+* 443 HTTPS *Hypertext Transfer Protocol over TLS/SSL *
+
+Une liste des ports dans la wiki fr  
+[Liste de ports](https://fr.wikipedia.org/wiki/Liste_de_ports_logiciels)
+
+En español  
+[Puertos](https://es.wikipedia.org/wiki/Anexo:Puertos_de_red)

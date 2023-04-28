@@ -93,8 +93,8 @@ nav:
       - Oopsie: 'tiers2/oopsie.md'
     - 'Redes':
       - 'Introduction au reseau': 'redes/intro.md'
-      - 'IP': 'redes/ip.md'
-      - 'Puerto': 'redes/puertos.md'
+      - 'Dirección IP': 'redes/ip.md'
+      - 'Puertos': 'redes/puertos.md'
       - 'Dirección MAC': 'redes/mac.md'
       - 'Algunos protocolos': 'redes/protocolos.md'
       - 'Modelo OSI': 'redes/modeloOSI.md'

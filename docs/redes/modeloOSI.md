@@ -31,3 +31,16 @@ Image from [wikimedia](https://commons.wikimedia.org/wiki/File:OSI_Model_v1.svg?
 Existe igualmente el [Modelo TCP/IP](https://es.wikipedia.org/wiki/Modelo_TCP/IP)
 
 TCP/IP es un conjunto de protocolos que permiten la comunicación entre los ordenadores pertenecientes a una red. La sigla TCP/IP significa Protocolo de control de transmisión/Protocolo de Internet. Proviene de los nombres de dos protocolos importantes incluidos en el conjunto TCP/IP, es decir, del protocolo TCP y del protocolo IP.
+
+## Encapsulación de datos
+
+Durante una transmisión, los datos pasan a través de cada una de las capas al nivel de la máquina emisora, de la 7 a la 1. En cada capa se agrega información al paquete de datos, es un **encabezado**, un conjunto de información que garantiza la transmisión.  
+En la máquina receptora, al pasar por cada capa (de 1 a 7), se lee la cabecera y luego se borra.  
+Así, al recibirlo, el mensaje se encuentra en su estado original.
+
+En cada nivel, el paquete de datos cambia de apariencia, porque se le agrega un encabezado, por lo que los nombres cambian según las capas:
+
+* El paquete de datos se denomina **mensaje** de capa de aplicación [7].
+* Luego, el mensaje se encapsula como un **segmento** en la capa de transporte [4].
+* El segmento una vez encapsulado en la capa de Internet toma el nombre de **datagrama** [3].
+* Finalmente, hablamos de **tramas** a nivel de la capa de acceso a la red .
