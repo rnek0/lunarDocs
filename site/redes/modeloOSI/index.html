@@ -18,7 +18,7 @@
         <link rel="prev" href="../protocolos/">
       
       
-        <link rel="next" href="../../about/">
+        <link rel="next" href="../subnetting/">
       
       <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
@@ -655,7 +655,21 @@
   
     <li class="md-nav__item">
       <a href="../ip/" class="md-nav__link">
-        IP
+        Dirección IP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../puertos/" class="md-nav__link">
+        Puertos
       </a>
     </li>
   
@@ -736,10 +750,31 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#encapsulacion-de-datos" class="md-nav__link">
+    Encapsulación de datos
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subnetting/" class="md-nav__link">
+        Subnetting
+      </a>
     </li>
   
 
@@ -837,8 +872,22 @@ En 1978, la ISO propuso este modelo bajo la norma ISO IS7498.</p>
 </tbody>
 </table>
 <hr />
+<p><img alt="Modelo OSI" src="../../assets/OSI_Model_v1.svg.png" title="Modelo OSI" /><br />
+Image from <a href="https://commons.wikimedia.org/wiki/File:OSI_Model_v1.svg?uselang=es">wikimedia</a></p>
+<hr />
 <p>Existe igualmente el <a href="https://es.wikipedia.org/wiki/Modelo_TCP/IP">Modelo TCP/IP</a></p>
 <p>TCP/IP es un conjunto de protocolos que permiten la comunicación entre los ordenadores pertenecientes a una red. La sigla TCP/IP significa Protocolo de control de transmisión/Protocolo de Internet. Proviene de los nombres de dos protocolos importantes incluidos en el conjunto TCP/IP, es decir, del protocolo TCP y del protocolo IP.</p>
+<h2 id="encapsulacion-de-datos">Encapsulación de datos</h2>
+<p>Durante una transmisión, los datos pasan a través de cada una de las capas al nivel de la máquina emisora, de la 7 a la 1. En cada capa se agrega información al paquete de datos, es un <strong>encabezado</strong>, un conjunto de información que garantiza la transmisión.<br />
+En la máquina receptora, al pasar por cada capa (de 1 a 7), se lee la cabecera y luego se borra.<br />
+Así, al recibirlo, el mensaje se encuentra en su estado original.</p>
+<p>En cada nivel, el paquete de datos cambia de apariencia, porque se le agrega un encabezado, por lo que los nombres cambian según las capas:</p>
+<ul>
+<li>El paquete de datos se denomina <strong>mensaje</strong> de capa de aplicación [7].</li>
+<li>Luego, el mensaje se encapsula como un <strong>segmento</strong> en la capa de transporte [4].</li>
+<li>El segmento una vez encapsulado en la capa de Internet toma el nombre de <strong>datagrama</strong> [3].</li>
+<li>Finalmente, hablamos de <strong>tramas</strong> a nivel de la capa de acceso a la red .</li>
+</ul>
 
 
 
@@ -883,13 +932,13 @@ En 1978, la ISO propuso este modelo bajo la norma ISO IS7498.</p>
         
         
           
-          <a href="../../about/" class="md-footer__link md-footer__link--next" aria-label="Suivant: About" rel="next">
+          <a href="../subnetting/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Subnetting" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   Suivant
                 </span>
-                About
+                Subnetting
               </div>
             </div>
             <div class="md-footer__button md-icon">
