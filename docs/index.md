@@ -27,7 +27,7 @@ Bref, il me faut un bon système de prise de notes et je suis en phase de test; 
 * il faut que le machin puisse générer des sites, voir des books 
 * que la lecture soit disponible de partout 
 * que la mise à jour se fasse facilement, donc le workflow soit simple.
-* qu'on puisse customiser la chose tant qu'a faire et qu'on puisse fasse perso.
+* qu'on puisse customiser la chose tant qu'a faire et qu'on puisse personnaliser (mettre les mains dedans).
 * i18n serait un plus.
 * Pourquoi pas générer des pdf.
 
