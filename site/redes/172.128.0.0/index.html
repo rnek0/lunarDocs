@@ -12,20 +12,20 @@
         <meta name="author" content="rnek0">
       
       
-        <link rel="canonical" href="https://rnek0.github.io/lunarDocs/redes/modeloOSI/">
+        <link rel="canonical" href="https://rnek0.github.io/lunarDocs/redes/172.128.0.0/">
       
       
-        <link rel="prev" href="../protocolos/">
+        <link rel="prev" href="../subnetting/">
       
       
-        <link rel="next" href="../subnetting/">
+        <link rel="next" href="../../about/">
       
       <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
-        <title>Modelo OSI - rnek0's notes</title>
+        <title>Calculo subnetting - rnek0's notes</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#el-modelo-osi" class="md-skip">
+        <a href="#exercice-calculs-sur-sous-reseaux" class="md-skip">
           Aller au contenu
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Modelo OSI
+              Calculo subnetting
             
           </span>
         </div>
@@ -708,59 +708,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Modelo OSI
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../modeloOSI/" class="md-nav__link">
         Modelo OSI
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#composicion" class="md-nav__link">
-    Composición
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encapsulacion-de-datos" class="md-nav__link">
-    Encapsulación de datos
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -784,11 +736,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../172.128.0.0/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Calculo subnetting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Calculo subnetting
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trouver-laddresse-de-sous-reseau" class="md-nav__link">
+    Trouver l'addresse de sous-reseau
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nombre-daddresses-utilisables" class="md-nav__link">
+    Nombre d'addresses utilisables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plage-dadressage" class="md-nav__link">
+    Plage d'adressage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calcul-avec-cidr" class="md-nav__link">
+    Calcul avec CIDR
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -830,78 +844,89 @@
                   
 
 
-<h1 id="el-modelo-osi">El modelo OSI</h1>
-<p>El <a href="https://es.wikipedia.org/wiki/Modelo_OSI">modelo OSI</a> (International Systems Interconnection) se explica por el hecho de que hay muchos constructores de hardware y si cada uno propusiera su arquitectura de comunicación diferente no habría manera de comprenderse. Para evitar la multiplicación de soluciones de conexión, el ISO (International Standards Organisation) una organización que depende de la ONU y compuesta por mas de una centena de organismos de normalización ha desarrollado <strong>un sistema de referencia para todos</strong>. Cada sistema debe respetar el comportamiento global de la red al ser añadido, modificado o suprimido de ella.<br />
-En 1978, la ISO propuso este modelo bajo la norma ISO IS7498.</p>
-<p>Se trata mas de una especificación de lo que tienen que hacer las capas y no de como se deben hacer las cosas, <strong>es un modelo de referencia para los protocolos de la red</strong>. El modelo OSI no es la definición de una topología ni un modelo de red en sí mismo. Tampoco específica ni define los protocolos que se utilizan en la comunicación, ya que estos están implementados de forma independiente a este modelo. Lo que realmente hace OSI es definir la funcionalidad de ellos para conseguir un estándar. <strong>Lo que deben hacer y no como lo hacen</strong>.</p>
-<h2 id="composicion">Composición</h2>
-<p>El modelo OSI está <strong>conformado por 7 capas</strong> o niveles de abstracción. </p>
-<ul>
-<li>Capa Medio - <a href="https://es.wikipedia.org/wiki/Modelo_OSI#Capa_Medio_-_Capa_0*_(Layer_Zero)">Capa 0* (Layer Zero)</a> No oficial.</li>
-</ul>
+<h1 id="exercice-calculs-sur-sous-reseaux">Exercice, calculs sur sous-reseaux</h1>
+<p>Avec :</p>
 <table>
 <thead>
 <tr>
-<th>Capas</th>
-<th>Nombre</th>
-<th>Propósito</th>
+<th>Description</th>
+<th>IP</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1</strong></td>
-<td><a href="https://es.wikipedia.org/wiki/Capa_física"><strong>física</strong></a></td>
-<td>cables de cobre o fibra óptica</td>
+<td>Adresse IP</td>
+<td><strong>172.128.10.5</strong></td>
 </tr>
 <tr>
-<td><strong>2</strong></td>
-<td><a href="https://es.wikipedia.org/wiki/Capa_de_enlace_de_datos"><strong>enlace de datos</strong></a></td>
-<td>transferencia y control de error</td>
-</tr>
-<tr>
-<td><strong>3</strong></td>
-<td><a href="https://es.wikipedia.org/wiki/Capa_de_red"><strong>red</strong></a></td>
-<td>enrutamiento de paquetes de datos</td>
-</tr>
-<tr>
-<td><strong>4</strong></td>
-<td><a href="https://es.wikipedia.org/wiki/Capa_de_transporte"><strong>transporte     </strong></a></td>
-<td>control de flujo y la corrección de errores (entre otros)</td>
-</tr>
-<tr>
-<td><strong>5</strong></td>
-<td><a href="https://es.wikipedia.org/wiki/Capa_de_sesi%C3%B3n"><strong>sesión         </strong></a></td>
-<td>establecimiento, mantenimiento y control de sesiones</td>
-</tr>
-<tr>
-<td><strong>6</strong></td>
-<td><a href="https://es.wikipedia.org/wiki/Capa_de_presentaci%C3%B3n"><strong>presentación   </strong></a></td>
-<td>codificación, decodificación, compresión y cifrado de datos</td>
-</tr>
-<tr>
-<td><strong>7</strong></td>
-<td><a href="https://es.wikipedia.org/wiki/Capa_de_aplicaci%C3%B3n"><strong>aplicación     </strong></a></td>
-<td>servicios para aplicaciones de usuario finales</td>
+<td>Masque sous-reseau</td>
+<td><strong>255.255.192.0</strong></td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p><img alt="Modelo OSI" src="../../assets/OSI_Model_v1.svg.png" title="Modelo OSI" /><br />
-Image from <a href="https://commons.wikimedia.org/wiki/File:OSI_Model_v1.svg?uselang=es">wikimedia</a></p>
-<hr />
-<p>Existe igualmente el <a href="https://es.wikipedia.org/wiki/Modelo_TCP/IP">Modelo TCP/IP</a></p>
-<p>TCP/IP es un conjunto de protocolos que permiten la comunicación entre los ordenadores pertenecientes a una red. La sigla TCP/IP significa Protocolo de control de transmisión/Protocolo de Internet. Proviene de los nombres de dos protocolos importantes incluidos en el conjunto TCP/IP, es decir, del protocolo TCP y del protocolo IP.</p>
-<h2 id="encapsulacion-de-datos">Encapsulación de datos</h2>
-<p>Durante una transmisión, los datos pasan a través de cada una de las capas al nivel de la máquina emisora, de la 7 a la 1. En cada capa se agrega información al paquete de datos, es un <strong>encabezado</strong>, un conjunto de información que garantiza la transmisión.<br />
-En la máquina receptora, al pasar por cada capa (de 1 a 7), se lee la cabecera y luego se borra.<br />
-Así, al recibirlo, el mensaje se encuentra en su estado original.</p>
-<p>En cada nivel, el paquete de datos cambia de apariencia, porque se le agrega un encabezado, por lo que los nombres cambian según las capas:</p>
+<p>Déterminer :  </p>
 <ul>
-<li>El paquete de datos se denomina <strong>mensaje</strong> de capa de aplicación [7].</li>
-<li>Luego, el mensaje se encapsula como un <strong>segmento</strong> en la capa de transporte [4].</li>
-<li>El segmento una vez encapsulado en la capa de Internet toma el nombre de <strong>datagrama</strong> [3].</li>
-<li>Finalmente, hablamos de <strong>tramas</strong> a nivel de la capa de acceso a la red .</li>
+<li>L'addresse du reseau.</li>
+<li>Nombre d'adresses utilisables.</li>
+<li>Adresse de bloadcast du reseau.</li>
+<li>Plage adressable du reseau.</li>
 </ul>
+<h2 id="trouver-laddresse-de-sous-reseau">Trouver l'addresse de sous-reseau</h2>
+<p>On passe en binaire les octects de l'addresse IP et du masque de sous-reseau et on fais un <strong>ET logique</strong> sur chaque bit de ceux-ci.  Tool <a href="https://gist.github.com/rnek0/2152fd058edd7a97af2a4b1688761937">IpToBin.sh</a> pour la conversion.<br />
+- Interpretation du resultat :<br />
+en passant les octets en decimal on obtiens l'addresse du sous-reseau (172.128.0.0).</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="m">10101100</span>.10000000.00001010.00000101<span class="w">  </span><span class="m">172</span>.128.10.5
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="m">11111111</span>.11111111.11000000.00000000<span class="w">  </span><span class="m">255</span>.255.192.0
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>-----------------------------------<span class="w">  </span>ET<span class="w"> </span>logique
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="m">10101100</span>.10000000.00000000.00000000<span class="w">  </span><span class="m">172</span>.128.0.0
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="m">172</span>.128.0.0<span class="w">  </span>-&gt;<span class="w"> </span>addresse<span class="w"> </span>du<span class="w"> </span>sous-reseau
+</span></code></pre></div>
+<hr />
+<h2 id="nombre-daddresses-utilisables">Nombre d'addresses utilisables</h2>
+<p>On sait que :</p>
+<ul>
+<li><strong>tous les bits a 1</strong> du masque représentent le <strong>nombre de sous-reseaux adressables</strong></li>
+<li><strong>tous les bits a 0</strong> du masque représentent le <strong>nombre de machines (hosts) que l'on peut adresser</strong></li>
+</ul>
+<p>MASQUE DE SOUS-RESEAU :</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Pour<span class="w"> </span>le<span class="w"> </span>masque<span class="w"> </span><span class="m">255</span>.255.192.0
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Sous-reseaux<span class="w">        </span><span class="p">|</span><span class="w"> </span>Hosts<span class="w"> </span><span class="o">(</span>nombre<span class="w"> </span>machines,<span class="w"> </span>ici<span class="w"> </span><span class="m">14</span><span class="w"> </span>bits<span class="o">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="m">11111111</span>.11111111.11<span class="p">|</span><span class="m">000000</span>.00000000<span class="w">           </span><span class="m">16383</span><span class="w"> </span>donc<span class="w"> </span>+<span class="w"> </span><span class="nv">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16384</span><span class="w"> </span>-<span class="w"> </span><span class="m">2</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">                                               </span>**16382<span class="w"> </span>nombre<span class="w"> </span>de<span class="w"> </span>hosts**
+</span></code></pre></div>
+<p>Ce qui veut dire dans nôtre cas pour le nombre de machines (14 bits) : </p>
+<p>11111111111111 (14 bits) en binaire font 16383 ce qui est le plus grand nombre que l'on puisse coder sur 14 bits :</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>❯<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$((</span><span class="m">2#11111111111111</span><span class="k">))</span><span class="s2">&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="m">16383</span>
+</span></code></pre></div>
+<p>Pour connaître le nombre d'adresses a coder on doit ajouter +1 car les int commencent a zero (0-9) donc on en a <strong>un de plus</strong>.<br />
+Par ailleurs on sait qu'il y a deux addresses IP spéciales qui sont la première et la dernière, donc on retranche 2.</p>
+<p>Le <strong>nombre de hosts</strong> est donc : <strong>16382</strong></p>
+<h2 id="plage-dadressage">Plage d'adressage</h2>
+<p>Grâce au masque de sous reseau on connais la partie hôte (nombre de machines)<br />
+On passe tous les host (14 bits) de l'<strong>adresse de sous-reseau</strong> a 1 pour trouver l’adresse de broadcast :</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="m">172</span>.128.0.0<span class="w"> </span>en<span class="w"> </span>decimal
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="m">10101100</span>.10000000.00000000.00000000<span class="w">  </span>-&gt;<span class="w"> </span>addresse<span class="w"> </span>de<span class="w"> </span>sous-reseau
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="m">10101100</span>.10000000.00111111.11111111<span class="w">  </span>-&gt;<span class="w"> </span>broadcast<span class="w"> </span><span class="o">(</span>tous<span class="w"> </span>les<span class="w"> </span>hosts<span class="w"> </span>a<span class="w"> </span><span class="m">1</span><span class="o">)</span>
+</span></code></pre></div>
+<p><strong>172.128.63.255</strong> -&gt; L'<strong>adresse de broadcast</strong> est donc celle ci.</p>
+<p>Plage Addressable : </p>
+<p>L'addresse IP de la première machine correspond a celle du sous-reseau <strong>+1</strong><br />
+L'addresse IP de broadcast <strong>-1</strong> sera le dernier host : 172.128.0.254</p>
+<p>La plage d'adresses va de 172.128.0.1 à 172.128.0.254  </p>
+<hr />
+<h2 id="calcul-avec-cidr">Calcul avec CIDR</h2>
+<p>Dans cet exemple nous avons l'addresse IP 172.128.10.15 puis 18 bits a 1 dans le masque de sous-reseau.<br />
+On a donc <strong>172.128.10.15/18</strong></p>
+<p>On va aller dans notre "cheatsheet" faite avec LibreOffice pour voir dans notre CIDR, on voit qu'on est dans un <strong>subnet Class C</strong> et que l'on doit remplacer le 3eme byte par 192 pour obtenir les mask de sous reseau.</p>
+<p><img alt="Masque de sous reseau" src="../../assets/172_128_10_15mask.png" title="Masque de sous reseau" /></p>
+<p>De même on voit le nombre le nombre de machines dans le reseau: <strong>16382</strong></p>
+<p><img alt="Machines dasn le subnet" src="../../assets/172_128_10_15.png" title="Nombre de machines" /></p>
+<p>Nous avons l'addresse IP et le masque de sous-reseau on va les entrer dans notre feuille de calcul pour avoir le reste, c'est à dire l'addresse du reseau et celle de broadcast.</p>
+<p><img alt="Calcul du subnet" src="../../assets/172_128_10_15_subnet.png" title="Calcul du sous réseau grace au CIDR" /></p>
+<p>Las herramientas estan en la pagina <a href="../subnetting/#direcciones-especificas-red-y-broadcast">Subnetting</a></p>
+<hr />
 
 
 
@@ -930,7 +955,7 @@ Así, al recibirlo, el mensaje se encuentra en su estado original.</p>
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../protocolos/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Algunos protocolos" rel="prev">
+          <a href="../subnetting/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Subnetting" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -939,20 +964,20 @@ Así, al recibirlo, el mensaje se encuentra en su estado original.</p>
                 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Algunos protocolos
+                Subnetting
               </div>
             </div>
           </a>
         
         
           
-          <a href="../subnetting/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Subnetting" rel="next">
+          <a href="../../about/" class="md-footer__link md-footer__link--next" aria-label="Suivant: About" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Subnetting
+                About
               </div>
             </div>
             <div class="md-footer__button md-icon">

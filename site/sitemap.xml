@@ -2,107 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://rnek0.github.io/lunarDocs/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/about/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://rnek0.github.io/lunarDocs/redes/172.128.0.0/</loc>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/redes/intro/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/redes/ip/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/redes/mac/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/redes/modeloOSI/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/redes/protocolos/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/redes/puertos/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/redes/subnetting/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers0/dancing/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers0/explosion/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers0/fawn/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers0/meow/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers0/mongod/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers0/preignition/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers0/redeemer/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers0/sinced/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers1/appointment/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers1/sequel/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers2/archetype/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://rnek0.github.io/lunarDocs/tiers2/oopsie/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
