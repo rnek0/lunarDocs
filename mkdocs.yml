@@ -57,6 +57,11 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - md_in_html
+  
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
@@ -92,7 +97,7 @@ nav:
       - Archetype: 'tiers2/archetype.md'
       - Oopsie: 'tiers2/oopsie.md'
     - 'Redes':
-      - 'Introduction au reseau': 'redes/intro.md'
+      - 'Las redes informáticas': 'redes/intro.md'
       - 'Dirección IP': 'redes/ip.md'
       - 'Puertos': 'redes/puertos.md'
       - 'Dirección MAC': 'redes/mac.md'

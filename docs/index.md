@@ -1,12 +1,24 @@
 # rnek0's notes
 
-Voici des notes dans mon parcours d'apprentissage, ceci est purement perso mais il est possible que cela se retrouve sur le net (de nos jours cela serait non pas une sextape mais des notetape :D) elles ne seront pas traduites donc parfois en français ou espagnol ou en anglais. Celui qui a un doute il a qu'à aller sur :
+Voici des notes dans mon parcours d'apprentissage, ceci est purement perso mais il est possible que cela se retrouve sur le net; de nos jours cela serait non pas une sextape mais des notetape :laughing: .  
+Certaines ne seront pas traduites, donc parfois en français ou espagnol ou en anglais. Celui qui a un doute il peut aller sur :
 
 * [translate google](https://translate.google.fr)
 * [translate deepl](https://www.deepl.com/translator)
 * [Bing Microsoft Translator](https://www.bing.com/translator/)
 
 ou d'autres outils, au choix...
+
+```mermaid
+graph LR
+  A[Leo] --> B{Comprendo?};
+  B -->|Si| C[sigo leyendo];
+  B ---->|No| E[Como lo traduzco!, quien me lo explica ?];
+  C -->|Si| D[me gusta, leo mas ?];
+  D -->|Si| B;
+  D -->|No| F;
+  F[hasta otra...];
+```
 
 Ces notes se trouvent ici : 
 
