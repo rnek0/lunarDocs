@@ -14,8 +14,8 @@ Protocolo de comunicación de datos digitales clasificado funcionalmente en la c
 El protocolo IP determina el destinatario del mensaje mediante 3 campos:
 
 - El campo de **dirección IP**: dirección de la máquina. En IPv4 **4 octetos** (32bits) representados en decimal y separados por puntos. 
-- El campo de **máscara de subred**: una máscara de subred permite que el protocolo IP determine la **parte de la dirección IP que concierne a la red**
-- El campo de puerta de enlace predeterminada: "nodo que sirve como enlace entre dos redes informáticas" que permite que el protocolo de Internet sepa a qué máquina entregar el datagrama si la máquina de destino no está en la red local.
+- El campo de [**máscara de subred**](https://es.wikipedia.org/wiki/M%C3%A1scara_de_red): una máscara de subred permite que el protocolo IP determine la **parte de la dirección IP que concierne a la red**
+- El campo de [puerta de enlace predeterminada](https://es.wikipedia.org/wiki/Puerta_de_enlace) (en inglés gateway): "nodo que sirve como enlace entre dos redes informáticas" que permite que el protocolo de Internet sepa a qué máquina entregar el datagrama si la máquina de destino no está en la red local.
 
 ## Direcciones IP
 
