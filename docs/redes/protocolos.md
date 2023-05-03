@@ -87,4 +87,72 @@ L'en-tête du segment UDP est donc très simple : voir sur la [RFC 768](https://
 * 123: [NTP](https://es.wikipedia.org/wiki/Network_Time_Protocol) (Network Time Protocol) – un protocolo utilizado para sincronizar los relojes de los dispositivos en una red.
 * 161: [SNMP](https://es.wikipedia.org/wiki/Protocolo_simple_de_administraci%C3%B3n_de_red) (Simple Network Management Protocol) – un protocolo utilizado para administrar y supervisar dispositivos en una red.
 
+## Mas lejos con protocolos
 
+Para entrar a jugar con protocolos, es decir si haces algun tool o quieres ver cosas sobre protocolos en linea de comandos, hay una lib en Python llamada [Scapy](https://scapy.readthedocs.io/en/latest/introduction.html#) (Scapy is a Python program that enables the user to send, sniff and dissect and forge network packets.)
+
+Un ejemplo de como utilizarlo, aqui forjamos un paquete IP (capa 3) y lo enviamos al router, luego vamos a encapsular una traza ICMP y ver que nos devuelve; un ping casero que nos permite ver el [encabezado ICMP](https://es.wikipedia.org/wiki/Protocolo_de_control_de_mensajes_de_Internet#Cabecera_ICMP)
+
+```bash
+❯ sudo scapy -H
+[sudo] Mot de passe de rnek0 : 
+Welcome to Scapy (2023.03.29) using IPython 8.11.0
+>>> a=IP(ttl=10)
+>>> a.src
+'127.0.0.1'
+>>> a
+<IP  ttl=10 |>
+>>> a.dst="192.168.1.1"
+>>> a
+<IP  ttl=10 dst=192.168.1.1 |>
+>>> a.src
+'192.168.1.19'
+>>> a.dst
+'192.168.1.1'
+>>> send(a/ICMP())
+.
+Sent 1 packets.
+>>> p = sr1(a/ICMP())
+Begin emission:
+Finished sending 1 packets.
+
+Received 1 packets, got 1 answers, remaining 0 packets
+>>> p.show()
+###[ IP ]### 
+  version   = 4
+  ihl       = 5
+  tos       = 0x0
+  len       = 28
+  id        = 32331
+  flags     = 
+  frag      = 0
+  ttl       = 64
+  proto     = icmp
+  chksum    = 0x7931
+  src       = 192.168.1.1
+  dst       = 192.168.1.19
+  \options   \
+###[ ICMP ]### 
+     type      = echo-reply
+     code      = 0
+     chksum    = 0xffff
+     id        = 0x0
+     seq       = 0x0
+     unused    = ''
+###[ Padding ]### 
+        load      = '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+```
+
+Una miradita con nuestro amigo [wireshark](https://www.wireshark.org/docs/) : 
+
+Aqui vemos el ttl de 10 que le pusimos al envio (por ejemplo)
+
+![ICMP y Wireshark1](../assets/icmp1.png)
+
+Aqui mas cosillas como la encapsulacion de icmp dentro de ip para nuestro ping casero.
+
+![ICMP y Wireshark2](../assets/icmp2.png)
+
+Para acabar con el tema que da para largo, un enlace para ver como se vé el protocolo TCP desde un punto de vista de desarrollador con [C y sockets](https://broux.developpez.com/articles/c/sockets/#LIII-A) :fr:
+
+---

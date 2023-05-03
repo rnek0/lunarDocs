@@ -70,7 +70,7 @@ Et aussi [mdBook](https://rust-lang.github.io/mdBook/) (*Rust*) que j'aimerais a
 
 ## Mkdocs
 
-C'est le générateur de documentation que vous voyez en ce moment. Si vous êtes intéressé voici une video de [James Willett](https://yewtu.be/watch?v=Q-YA_dA8C20) à ne pas manquer.  
+C'est le générateur de documentation que vous voyez en ce moment. Si vous êtes intéressé voici une video de [James Willett](https://yewtu.be/watch?v=Q-YA_dA8C20) :gb: à ne pas manquer.  
 
 Quelques commandes très utiles de [MkDocs](https://www.mkdocs.org/)
 

@@ -32,7 +32,7 @@ Ejemplo de conversion de una dirección IP (192.168.0.1) de decimal hacia binari
 
 [Un script para tenerlo mas a mano](https://gist.github.com/rnek0/2152fd058edd7a97af2a4b1688761937)
 
- 
+Un post sobre 
 
 ### Dirección Internet vs URL
 
