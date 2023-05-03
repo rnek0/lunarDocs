@@ -758,8 +758,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#direccionamiento-y-arquitectura-de-clases-de-red" class="md-nav__link">
+    Direccionamiento y arquitectura de clases de red
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cidr" class="md-nav__link">
     CIDR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direccion-de-subred" class="md-nav__link">
+    Dirección de subred
   </a>
   
 </li>
@@ -844,6 +858,14 @@
 </span></code></pre></div>
 <p>Gracias a la mascara de red tenemos dos identificadores para nuestro ordenador, la Direccion IP y la red. Esto esta a la base del subnetting. De hecho al configurar una interfaz (tarjeta de red) se te pide una IP e igualmente la mascara de red.</p>
 <p>Es lo mismo que cuando mandas una carta a alguien, poniendo el nombre de la ciudad, es la oficina de correo de la ciudad la que distribuye a la dirección correcta. Como sabemos, en las ciudades a menudo hay calles o avenidas que tienen el mismo nombre que en otras ciudades. Por ello en casa, en la LAN (local area network) yo puedo tener la misma IP que tu en tu casa, sin embargo la Dirección IP de tu router (el punto de entrada a tu subred hacia tu area local) sera una IP expuesta al exterior de la red. Ese nodo (tu router) tiene dos Direcciones IP en interfaces distintas (una para casa y otra para la calle) es decir una <strong>ip publica</strong> y una <strong>ip privada</strong>.  Un vidéo explicativo por <a href="https://youtu.be/NfzYr6xVJiM?t=77">Alvaro Chirou</a></p>
+<h2 id="direccionamiento-y-arquitectura-de-clases-de-red">Direccionamiento y arquitectura de clases de red</h2>
+<p>En las primeras etapas del desarrollo del Protocolo de Internet,​ los administradores de Internet interpretaban las direcciones IP en dos partes, <em>los primeros 8 bits</em> para designar la <strong>dirección de red</strong> y <em>el resto</em> para <strong>individualizar la computadora dentro de la red</strong>. Este método pronto probó ser inadecuado, cuando se comenzaron a agregar nuevas redes a las ya asignadas. En 1981 el direccionamiento internet fue revisado y se introdujo la arquitectura de clases. (classful network architecture).​ En esta arquitectura hay tres clases de direcciones IP que una organización puede recibir de parte de la Internet Corporation for Assigned Names and Numbers (ICANN): clase A, clase B y clase C.</p>
+<ul>
+<li>Clase A : el primer octeto identifica la red. De 0 a 127 en su primer octeto.</li>
+<li>Clase B : los dos primeros octetos identifican la red. De 128 a 191 en su primer octeto.</li>
+<li>Clase C : los tres primeros​ octetos identifican la red. De 192 a 223 en su primer octeto.</li>
+</ul>
+<p>El diseño de redes de clases (classful) no era escalable y frente a una gran expansión de las redes fue reemplazado por una arquitectura de redes sin clases Classless Inter-Domain Routing (CIDR)​ en el año 1993.</p>
 <h2 id="cidr">CIDR</h2>
 <p>A menudo vemos esta notación : 192.168.1.16<strong>/24</strong> ya veremos con la mascara de subred que el 24 corresponde al numero de bits a 1 llamado <strong>prefijo</strong>.</p>
 <p>El numero detrás del "/" es el <a href="https://es.wikipedia.org/wiki/Classless_Inter-Domain_Routing" title="Classless Inter-Domain Routing"><strong>CIDR</strong></a> (Classless Inter-Domain Routing)</p>
@@ -881,6 +903,7 @@
 </tr>
 </tbody>
 </table>
+<h2 id="direccion-de-subred">Dirección de subred</h2>
 <p>La parte de <strong>dirección de la subred</strong> es : <strong>192.168.1.0</strong> y el nombre de maquinas permitidas sera 256 (2⁸) pero en realidad hay dos menos, porque ? La primera es la dirección de la red y la ultima la del broadcast; esas dos ip están reservadas, por ello yo pienso que son 254 en este caso.</p>
 <p>Para mas calculos de mascaras ver la <a href="https://github.com/rnek0/lunarDocs/blob/main/docs/assets/masquesSousReseau.ods">hoja de calculo</a> con LibreOffice.</p>
 <h2 id="direcciones-especificas-red-y-broadcast">Direcciones especificas (red y broadcast)</h2>
