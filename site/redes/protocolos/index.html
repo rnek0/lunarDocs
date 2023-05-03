@@ -769,6 +769,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mas-lejos-con-protocolos" class="md-nav__link">
+    Mas lejos con protocolos
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -941,6 +948,64 @@ L'en-tête du segment UDP est donc très simple : voir sur la <a href="https://d
 <li>123: <a href="https://es.wikipedia.org/wiki/Network_Time_Protocol">NTP</a> (Network Time Protocol) – un protocolo utilizado para sincronizar los relojes de los dispositivos en una red.</li>
 <li>161: <a href="https://es.wikipedia.org/wiki/Protocolo_simple_de_administraci%C3%B3n_de_red">SNMP</a> (Simple Network Management Protocol) – un protocolo utilizado para administrar y supervisar dispositivos en una red.</li>
 </ul>
+<h2 id="mas-lejos-con-protocolos">Mas lejos con protocolos</h2>
+<p>Para entrar a jugar con protocolos, es decir si haces algun tool o quieres ver cosas sobre protocolos en linea de comandos, hay una lib en Python llamada <a href="https://scapy.readthedocs.io/en/latest/introduction.html#">Scapy</a> (Scapy is a Python program that enables the user to send, sniff and dissect and forge network packets.)</p>
+<p>Un ejemplo de como utilizarlo, aqui forjamos un paquete IP (capa 3) y lo enviamos al router, luego vamos a encapsular una traza ICMP y ver que nos devuelve; un ping casero que nos permite ver el <a href="https://es.wikipedia.org/wiki/Protocolo_de_control_de_mensajes_de_Internet#Cabecera_ICMP">encabezado ICMP</a></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>❯<span class="w"> </span>sudo<span class="w"> </span>scapy<span class="w"> </span>-H
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">[</span>sudo<span class="o">]</span><span class="w"> </span>Mot<span class="w"> </span>de<span class="w"> </span>passe<span class="w"> </span>de<span class="w"> </span>rnek0<span class="w"> </span>:<span class="w"> </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Welcome<span class="w"> </span>to<span class="w"> </span>Scapy<span class="w"> </span><span class="o">(</span><span class="m">2023</span>.03.29<span class="o">)</span><span class="w"> </span>using<span class="w"> </span>IPython<span class="w"> </span><span class="m">8</span>.11.0
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">a</span><span class="o">=</span>IP<span class="o">(</span><span class="nv">ttl</span><span class="o">=</span><span class="m">10</span><span class="o">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&gt;&gt;&gt;<span class="w"> </span>a.src
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s1">&#39;127.0.0.1&#39;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>&gt;&gt;&gt;<span class="w"> </span>a
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>&lt;IP<span class="w">  </span><span class="nv">ttl</span><span class="o">=</span><span class="m">10</span><span class="w"> </span><span class="p">|</span>&gt;
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>&gt;&gt;&gt;<span class="w"> </span>a.dst<span class="o">=</span><span class="s2">&quot;192.168.1.1&quot;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>&gt;&gt;&gt;<span class="w"> </span>a
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>&lt;IP<span class="w">  </span><span class="nv">ttl</span><span class="o">=</span><span class="m">10</span><span class="w"> </span><span class="nv">dst</span><span class="o">=</span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="p">|</span>&gt;
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>&gt;&gt;&gt;<span class="w"> </span>a.src
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="s1">&#39;192.168.1.19&#39;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>&gt;&gt;&gt;<span class="w"> </span>a.dst
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="s1">&#39;192.168.1.1&#39;</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>&gt;&gt;&gt;<span class="w"> </span>send<span class="o">(</span>a/ICMP<span class="o">())</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>.
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>Sent<span class="w"> </span><span class="m">1</span><span class="w"> </span>packets.
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sr1<span class="o">(</span>a/ICMP<span class="o">())</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>Begin<span class="w"> </span>emission:
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>Finished<span class="w"> </span>sending<span class="w"> </span><span class="m">1</span><span class="w"> </span>packets.
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>Received<span class="w"> </span><span class="m">1</span><span class="w"> </span>packets,<span class="w"> </span>got<span class="w"> </span><span class="m">1</span><span class="w"> </span>answers,<span class="w"> </span>remaining<span class="w"> </span><span class="m">0</span><span class="w"> </span>packets
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>&gt;&gt;&gt;<span class="w"> </span>p.show<span class="o">()</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c1">###[ IP ]### </span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">  </span><span class="nv">version</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">4</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">  </span><span class="nv">ihl</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">  </span><span class="nv">tos</span><span class="w">       </span><span class="o">=</span><span class="w"> </span>0x0
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">  </span><span class="nv">len</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="m">28</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">  </span><span class="nv">id</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="m">32331</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">  </span><span class="nv">flags</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">  </span><span class="nv">frag</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">  </span><span class="nv">ttl</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="m">64</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">  </span><span class="nv">proto</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>icmp
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">  </span><span class="nv">chksum</span><span class="w">    </span><span class="o">=</span><span class="w"> </span>0x7931
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">  </span><span class="nv">src</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="m">192</span>.168.1.1
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">  </span><span class="nv">dst</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="m">192</span>.168.1.19
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">  </span><span class="se">\o</span>ptions<span class="w">   </span><span class="se">\</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="c1">###[ ICMP ]### </span>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">     </span><span class="nb">type</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>echo-reply
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">     </span><span class="nv">code</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">     </span><span class="nv">chksum</span><span class="w">    </span><span class="o">=</span><span class="w"> </span>0xffff
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">     </span><span class="nv">id</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>0x0
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">     </span><span class="nv">seq</span><span class="w">       </span><span class="o">=</span><span class="w"> </span>0x0
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">     </span><span class="nv">unused</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="c1">###[ Padding ]### </span>
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">        </span><span class="nv">load</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&#39;</span>
+</span></code></pre></div>
+<p>Una miradita con nuestro amigo <a href="https://www.wireshark.org/docs/">wireshark</a> : </p>
+<p>Aqui vemos el ttl de 10 que le pusimos al envio (por ejemplo)</p>
+<p><img alt="ICMP y Wireshark1" src="../../assets/icmp1.png" /></p>
+<p>Aqui mas cosillas como la encapsulacion de icmp dentro de ip para nuestro ping casero.</p>
+<p><img alt="ICMP y Wireshark2" src="../../assets/icmp2.png" /></p>
+<p>Para acabar con el tema que da para largo, un enlace para ver como se vé el protocolo TCP desde un punto de vista de desarrollador con <a href="https://broux.developpez.com/articles/c/sockets/#LIII-A">C y sockets</a> <img alt="🇫🇷" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1eb-1f1f7.svg" title=":fr:" /></p>
+<hr />
 
 
 
