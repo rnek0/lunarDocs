@@ -8,7 +8,7 @@ Todo lo que llega a tu ordenador, teléfono, teléfono móvil, televisor, o otro
 
 ## Historia
 
-Antes des empezar con la historia de las redes un video de [♤ ʂąƖɬıოცąŋƙ ♤](https://www.youtube.com/watch?v=vDW0w9SwThU) (en francés) para descansar un poco de la lectura, se trata de un [path de THM](https://tryhackme.com/room/whatisnetworking) sobre las redes, se puede ver igualmente en inglés [What is Networking? - Networking Basics](https://www.youtube.com/watch?v=42u_2e6eNF4).
+Antes des empezar con la historia de las redes un video de [♤ ʂąƖɬıოცąŋƙ ♤](https://www.youtube.com/watch?v=vDW0w9SwThU) :fr: para descansar un poco de la lectura, se trata de un [path de THM](https://tryhackme.com/room/whatisnetworking) sobre las redes, se puede ver igualmente este otro :gb: [What is Networking? - Networking Basics](https://www.youtube.com/watch?v=42u_2e6eNF4).
 
 A partir de 1958 el DoD 'Departamento de Defensa de Estados Unidos' crea la [ARPA](https://es.wikipedia.org/wiki/Agencia_de_Proyectos_de_Investigaci%C3%B3n_Avanzados_de_Defensa) la cual sera al origen de la red anterior a Internet. La primera iteración de Internet tuvo lugar como parte del proyecto **ARPANET** a fines de la década de 1960. Mas tarde se creara la red ARPA que pondrá en relación varias universidades y posteriormente, en 1980 ARPANET vuelve a tener un aspecto estratégico y sera separado en 3 partes, MILnet , DDN, NSFNET. Todo este proyecto fue financiado por el Departamento de Defensa de los Estados Unidos y fue la primera red documentada en acción. Sin embargo, no fue sino hasta 1989 que Tim Berners-Lee inventó Internet en el CERN, tal como la conocemos, con la creación de World Wide Web (WWW). Fue solo en ese momento que Internet fue usado para almacenar y compartir información (como lo es hoy).
 
@@ -20,6 +20,8 @@ Para poder formar una red se requieren bastantes elementos, por ejemplo: cables 
 Lo mas importante es la capa 8 del Modelo OSI (la que esta entre la silla y el monitor), para ello ha sido echo todo esto ;)
 
 Una de las cosas fundamentales que hace que la red funcione es el protocolo DNS del que hablaremos mas tarde. Hay organismos internacionales que están encargados de gestionar este proceso. 
+
+Sobre el [hardware en las redes](https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/le-concept-et-les-bases/construire-un-reseau-le-materiel/) :fr: en la web de zeste de savoir.
 
 ---
 

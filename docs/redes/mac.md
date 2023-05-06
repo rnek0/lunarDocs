@@ -274,7 +274,7 @@ Los códigos de la dirección MAC tienen un significado :
          id="tspan589"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
          x="63.898949"
-         y="91.551727">91:75:1a:ec:9a:c7</tspan></text>
+         y="91.551727">91:75:1a:ef:9a:c7</tspan></text>
   </g>
 </svg>
 
