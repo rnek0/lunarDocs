@@ -44,3 +44,7 @@ En cada nivel, el paquete de datos cambia de apariencia, porque se le agrega un 
 * Luego, el mensaje se encapsula como un **segmento** en la capa de transporte [4].
 * El segmento una vez encapsulado en la capa de Internet toma el nombre de **datagrama** [3].
 * Finalmente, hablamos de **tramas** a nivel de la capa de acceso a la red .
+
+---
+
+La [web de frameip](https://www.frameip.com/osi/) :fr: estupenda para aprender sobre conceptos de redes.  

@@ -106,4 +106,5 @@ nav:
       - 'Modelo OSI': 'redes/modeloOSI.md'
       - 'Subnetting': 'redes/subnetting.md'
       - 'Calculo subnetting': 'redes/172.128.0.0.md'
+      - 'Mindmap redes': 'redes/mindmap.md'
     - About: about.md
