@@ -97,6 +97,7 @@ nav:
     - 'Tiers 2':
       - Archetype: 'tiers2/archetype.md'
       - Oopsie: 'tiers2/oopsie.md'
+      - Unified: 'tiers2/unified.md'
     - 'Redes':
       - 'Las redes informáticas': 'redes/intro.md'
       - 'Dirección IP': 'redes/ip.md'
