@@ -1,6 +1,7 @@
 # Meow
 
-![Meow](../img/Meow.png)
+![Meow](../img/Meow.png)  
+Linux
 
 **Meow** est la machine la plus simple dans le tiers 0 de l'academy HTB.  
 Elle couvre :

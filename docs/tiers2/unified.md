@@ -1,6 +1,7 @@
 # Unified
 
-Notes sur la machine Unified.
+![Fawn](../img/Unified.png)  
+Linux
 
 Cette machine est intéressante vu que Log4j a surpris tout le monde, étant donné que c'est une faille qui est la depuis un bon moment et elle n'a été découverte que récemment.  Elle a même permis de prendre conscience sur le fait qu'un seul développeur à la charge d'un projet et qui fait ce code de façon bénévole pouvait être à la base d'une faille de grosse ampleur. [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228)
 
@@ -121,5 +122,5 @@ On se connecte en ssh et la machine est finie. \o/
 
 [Pwned](https://www.hackthebox.com/achievement/machine/944728/441) 
 
----
-
+---  
+<div style="text-align: right;"><a href="#" >up &uarr;</a>&nbsp;</div>

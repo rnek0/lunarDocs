@@ -1,6 +1,9 @@
 # Included
 
-Included est une machine classée trés facile qui se trouve dans le tiers 2. On y voit : 
+![Fawn](../img/Included.png)  
+Linux
+
+Included est une machine classée très facile. On y voit : 
 
 * LFI
 * Tftp
@@ -365,7 +368,7 @@ wget http://10.10.15.253:8000/rootfs.squashfs
 
 Après être entré en root je me suis fait éjecter juste avant de récupérer le flag ! donc il a fallu revenir refaire le mouvement lateral puis heureusement que le container était en train de tourner donc du coup je suis entré et j'ai pris le flag.
 
-[pwned](https://www.hackthebox.com/achievement/machine/944728/292)
+[Pwned](https://www.hackthebox.com/achievement/machine/944728/292)
 
 ---  
 <div style="text-align: right;"><a href="#" >up &uarr;</a>&nbsp;</div>
