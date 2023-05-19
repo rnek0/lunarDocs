@@ -63,7 +63,7 @@ Nmap done: 1 IP address (1 host up) scanned in 7.77 seconds
 
 Nous avons juste un port 80 ouvert on dirais. On va voir ce que l'on sers dessus :
 
-![Page d'accueil](../img/webpage_port_80.png "Possible LFI avec var file sur url")
+![Page d'accueil](../img/page-port-80.png "Possible LFI avec var file sur url")
 
 Rien d’intéressant sauf le fait que l'url semble inclure des fichiers.php donc possible **LFI** (_local file incusion_)
 
