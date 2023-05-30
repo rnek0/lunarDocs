@@ -105,6 +105,8 @@ nav:
       - Oopsie: 'tiers2/oopsie.md'
       - Unified: 'tiers2/unified.md'
       - Included: 'tiers2/included.md'
+    - 'HTB Machines':      
+      - Validation: 'htbmachines/validation.md'
     - 'Redes':
       - 'Las redes informáticas': 'redes/intro.md'
       - 'Dirección IP': 'redes/ip.md'

