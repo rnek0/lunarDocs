@@ -22,12 +22,6 @@ lhost='10.10.15.253'
 Nous commençons, comme toujours, par scanner la cible pour trouver des ports ouverts :
 
 ```bash
-❯ nmap -p- -sS --open --min-rate 5000 -n -Pn -vvv $rhost -oG initial.Included
-Starting Nmap 7.93 ( https://nmap.org ) at 2023-05-19 00:47 CEST
-Read data files from: /usr/bin/../share/nmap
-WARNING: No targets were specified, so 0 hosts scanned.
-Nmap done: 0 IP addresses (0 hosts up) scanned in 0.04 seconds
-           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)
 ❯ rhost='10.129.102.34'
 ❯ nmap -p- -sS --open --min-rate 5000 -n -Pn -vvv $rhost -oG initial.Included
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-05-19 00:48 CEST
@@ -64,11 +58,14 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 7.77 seconds
 ```
 
-Nous avons juste un port 80 ouvert on dirais. On va voir ce que l'on sers dessus :
+Nous avons juste un port 80 ouvert on dirais, avec :    
+
+* Un site en php : http://10.129.102.34/?file=home.php  
+* sur un serveur Apache httpd 2.4.29
 
 ![Page d'accueil](../img/page-port-80.png "Possible LFI avec var file sur url")
 
-Rien d’intéressant sauf le fait que l'url semble inclure des fichiers.php donc possible **LFI** (_local file incusion_)
+Rien d’intéressant en navigant sur le site sauf le fait que l'url semble inclure des fichiers.php donc possible **LFI** (_local file incusion_)
 
 D'ailleurs on tente de voir le .htaccess comme ceci et ça marche : 
 
@@ -80,7 +77,7 @@ Et cela retourne :
 RewriteEngine On RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC] RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L] # #AuthType Basic #AuthUserFile /var/www/html/.htpasswd #Require valid-user 
 ```
 
-Ce qui montre bien qu'il y a inclusion. 
+Ce qui montre bien qu'il y a inclusion de fichier et aucun filtrage. 
 
 On va tenter d'afficher **/etc/passwd** pour voir:  
 
@@ -147,7 +144,9 @@ wget -qO- http://10.129.102.34/index.php > test2.txt
 
 ```
 
-Ici on aurait pu fuzz pour voir si on trouve d'autres resources.
+En fait au vu de ce qu'il y a dans le .htaccess il y a certainement une redirection. Voir [le module mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) et les regles [ici](https://httpd.apache.org/docs/2.4/rewrite/flags.html)
+
+Ici on aurait pu fuzz pour voir si on trouve d'autres resources, je me demande ce que cela donnerait avec la redirection.
 
 Voyons d'abord comment cette fonctionnalité (LFI) pourrait fonctionner.
 
@@ -278,7 +277,7 @@ Nous avons le premier flag.
 
 Nous allons utiliser l'application **LXC Distribution Builder**.  
 
-What is [LXD](https://linuxcontainers.org/lxd/introduction/)?
+What is [LXD](https://linuxcontainers.org/lxd/introduction/)? ; [Howto](https://github.com/lxc/distrobuilder/blob/master/doc/howto/build.md)
 
 > LXD is a management API for dealing with LXC containers on Linux systems. It will
 perform tasks for any members of the local lxd group. It does not make an effort to

@@ -24,4 +24,14 @@ Enlaces :
 
 ---
 
+## Descargo de responsabilidad (Aviso legal)
 
+Este descargo de responsabilidad se aplica a todas las páginas, guías y, en general, a todo el contenido publicado por el autor en este sitio.
+
+Al visitar este sitio, participar en su contenido, o aplicar lo que se presenta, usted entiende y acepta que :
+
+Estas paginas son SOLO para **fines educativos** y preventivos, de ninguna manera fomentan el incumplimiento de la ley. No se dará respuesta a solicitudes que infrinjan cualquier ley. **Usted es el único responsable de sus actos** y del uso que haga de lo que se muestra en este sitio. Ni el autor ni el organismo que hospeda estas paginas podrán ser considerados responsables de sus actos, cualquiera que sea su naturaleza.
+
+Los entornos o servicios de terceros mencionados en estas paginas sobre pentesting y/o seguridad informatica son systèmas controlados y previstos para tal efecto. El software mencionado conlleva generalmente una licencia y no se fomenta ningun incumplimiento de ella. Si, por alguna razon un contenido presente en estas paginas no respeta sus derechos de autor no dude en ponerse en contacto con el administrador del sitio web (admin @ lunarviews.net)
+
+---
