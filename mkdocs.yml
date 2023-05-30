@@ -82,7 +82,7 @@ extra:
 # Navigation
 nav:
     - lunarviews: index.md
-    - 'Tiers 0':
+    - 'HTB Starting':
       - Meow: 'tiers0/meow.md'
       - Fawn: 'tiers0/fawn.md'
       - Dancing: 'tiers0/dancing.md'
@@ -91,7 +91,6 @@ nav:
       - Preignition: 'tiers0/preignition.md'
       - Mongod: 'tiers0/mongod.md'
       - Sinced: 'tiers0/sinced.md'
-    - 'Tiers 1':
       - Appointment: 'tiers1/appointment.md'
       - Sequel: 'tiers1/sequel.md'
       - Crocodile: 'tiers1/crocodile.md'
@@ -102,7 +101,6 @@ nav:
       - Funnel: 'tiers1/funnel.md'
       - Pennyworth: 'tiers1/pennyworth.md'
       - Tactics: 'tiers1/tactics.md'
-    - 'Tiers 2':
       - Archetype: 'tiers2/archetype.md'
       - Oopsie: 'tiers2/oopsie.md'
       - Unified: 'tiers2/unified.md'
