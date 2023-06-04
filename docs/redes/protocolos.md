@@ -55,7 +55,7 @@ cf: [RFC 9293](https://datatracker.ietf.org/doc/html/rfc9293)
     - Cf: [Bandit lvl 13](https://overthewire.org/wargames/bandit/bandit14.html)
 * 23: [Telnet](https://fr.wikipedia.org/wiki/Telnet) – un protocolo utilizado para la conexión remota a dispositivos de red.
     - Cf: [Meow (HTB)](/lunarDocs/tiers0/meow/) 
-* 80: [HTTP](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol) (Hypertext Transfer Protocol) – el protocolo que se utiliza para la transferencia de datos en la World Wide Web.
+* 80: [HTTP](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol) (Hypertext Transfer Protocol) – el protocolo que se utiliza para la transferencia de datos en la World Wide Web. [rfc9110 'HTTP Semantics'](https://www.rfc-editor.org/rfc/rfc9110#name-syntax-notation)
 * 443: [HTTPS](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure) (Hypertext Transfer Protocol Secure) – la versión segura de HTTP, que utiliza encriptación [SSL](https://fr.wikipedia.org/wiki/Transport_Layer_Security)/TLS para proteger las comunicaciones web.
 
 ## Les caractéristiques du protocole UDP
