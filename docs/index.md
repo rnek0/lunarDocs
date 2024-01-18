@@ -59,6 +59,8 @@ Pour les blogs ou docs en ligne :
 
 * **Jupyter notebooks** (*Python*) (intéressant car je peux générer des pdf à la volée)
     * Tests en lisant des tutos <https://github.com/rnek0/TSbook>  
+* **Zola** (*Rust*) un petit dernier que j'ai vu passer et qui m'a donné envie de tester des que j'aurai un p'ti moment.
+    * Web <https://www.getzola.org> 
 
 Il y a ceux-ci également, mais ce ne sont pas forcement mes choix pour une utilisation en ligne :
 
