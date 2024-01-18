@@ -27,13 +27,13 @@ git clone git@github.com:rnek0/lunarDocs.git
 ## Write & serve
 
 ```bash
-mkdoc serve
+mkdocs serve
 ```
 
 ## Build
 
 ```bash
-mkdoc build
+mkdocs build
 ```
 
 ## Git cmds
