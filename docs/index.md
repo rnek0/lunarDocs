@@ -53,8 +53,7 @@ Pour les blogs ou docs en ligne :
 
 * **Jekyll** (*Python*) avec md pour un blog simple <https://web.lunarviews.net>
 * **Hugo** (*Go*) avec md pour un blog simple 
-    * Mon theme (en travaux) <https://blog.lunarviews.net>
-    * Avec [hugo-ficurinia](https://gitlab.com/gabmus/hugo-ficurinia) <https://rnek0.srht.site/>
+    * Mon blog Hugo est en travaux (pas disponible)
 * **Material for MkDocs** (*Python*) <https://rnek0.github.io/lunarDocs/>
 
 * **Jupyter notebooks** (*Python*) (intéressant car je peux générer des pdf à la volée)
