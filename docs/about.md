@@ -20,7 +20,7 @@ Enlaces :
 
 * Mi [blog](https://web.lunarviews.net)
 * Mi cuenta en [github](https://github.com/rnek0)
-* Mi cuenta en [Mastodon](https://mamot.fr/@oggy)
+* Mi cuenta en [Mastodon](https://mamot.fr/@oggy) si algo te parece inapropiado en esta web, envíame un mensaje privado a esta cuenta.
 
 ---
 
