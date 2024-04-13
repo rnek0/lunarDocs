@@ -17,15 +17,16 @@ Les outils d'accès à distance basés sur **l'interface utilisateur** graphique
 
 ## Un début de Enumeration 
 
-Un début d'enumeration avec **nmap** et les flags -sV (découverte des versions des services)
+Un début d'enumeration avec **nmap** et ```le flags -sV``` (découverte des versions des services)
 
 Certains ports intéressants :
- -135 TCP
- -139 TCP
- -445 TCP
- -3389 TCP
- -5357 TCP
 
- ## xfreerdp
+- 135 TCP
+- 139 TCP
+- 445 TCP
+- 3389 TCP
+- 5357 TCP
 
- xfreerdp est un client RDP (Remote Desktop Protocol) X11 qui fait partie du projet FreeRDP. Un serveur RDP est intégré à de nombreuses éditions de Windows. Les serveurs alternatifs incluaient xrdp et VRDP (VirtualBox).
+## xfreerdp
+
+**xfreerdp** est un client **RDP** (Remote Desktop Protocol) X11 qui fait partie du projet FreeRDP. Un serveur RDP est intégré à de nombreuses éditions de Windows. Les serveurs alternatifs incluaient xrdp et VRDP (VirtualBox).
