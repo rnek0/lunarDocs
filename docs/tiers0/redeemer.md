@@ -1,7 +1,7 @@
 # Redeemer
 
-![Fawn](../img/Redeemer.png)  
-Linux (Very Easy)
+![Redeemer](../img/Redeemer.png)  
+Linux 
 
 La machine Redeemer est une introduction a l'universe des bases de donées **NoSQL** avec **Redis**.
 

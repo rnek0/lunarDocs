@@ -420,9 +420,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Explosion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Explosion
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cli-tools-outils-dacces-a-distance" class="md-nav__link">
+    Cli tools - Outils d'accès à distance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui-tools-outils-dacces-a-distance" class="md-nav__link">
+    GUI tools - Outils d'accès à distance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-debut-de-enumeration" class="md-nav__link">
+    Un début de Enumeration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -914,6 +959,25 @@
 
 
 <h1 id="explosion">Explosion</h1>
+<p><img alt="Explosion" src="../../img/Explosion.png" /><br />
+Windows</p>
+<p>Dans cette activité on voit des concepts qui se referent au travail avec des outils de communication à distance.</p>
+<h2 id="cli-tools-outils-dacces-a-distance">Cli tools - Outils d'accès à distance</h2>
+<p>Les outils d'accès à distance basés sur <strong>l'interface de ligne de commande</strong> existent depuis toujours.
+- Notion du TAP (Traffic Access Point)
+- TCP &amp; Telnet vs SSH (SSH utilise la cryptographie à clé publique pour vérifier l'identité de l'hôte distant)</p>
+<h2 id="gui-tools-outils-dacces-a-distance">GUI tools - Outils d'accès à distance</h2>
+<p>Les outils d'accès à distance basés sur <strong>l'interface utilisateur</strong> graphique sont plus récents.</p>
+<h2 id="un-debut-de-enumeration">Un début de Enumeration</h2>
+<p>Un début d'enumeration avec <strong>nmap</strong> et les flags -sV (découverte des versions des services)</p>
+<p>Certains ports intéressants :
+ -135 TCP
+ -139 TCP
+ -445 TCP
+ -3389 TCP
+ -5357 TCP</p>
+<p>## xfreerdp</p>
+<p>xfreerdp est un client RDP (Remote Desktop Protocol) X11 qui fait partie du projet FreeRDP. Un serveur RDP est intégré à de nombreuses éditions de Windows. Les serveurs alternatifs incluaient xrdp et VRDP (VirtualBox).</p>
 
 
 
