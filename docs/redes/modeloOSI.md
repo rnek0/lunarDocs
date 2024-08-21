@@ -16,10 +16,10 @@ El modelo OSI está **conformado por 7 capas** o niveles de abstracción.
 | **1**  | [**física**](https://es.wikipedia.org/wiki/Capa_física)          | cables de cobre o fibra óptica |  
 | **2**  | [**enlace de datos**](https://es.wikipedia.org/wiki/Capa_de_enlace_de_datos)  | transferencia y control de error |  
 | **3**  | [**red**](https://es.wikipedia.org/wiki/Capa_de_red) | enrutamiento de paquetes de datos |  
-| **4**  | [**transporte     **](https://es.wikipedia.org/wiki/Capa_de_transporte) | control de flujo y la corrección de errores (entre otros) |  
-| **5**  | [**sesión         **](https://es.wikipedia.org/wiki/Capa_de_sesi%C3%B3n) | establecimiento, mantenimiento y control de sesiones  |  
-| **6**  | [**presentación   **](https://es.wikipedia.org/wiki/Capa_de_presentaci%C3%B3n) | codificación, decodificación, compresión y cifrado de datos |  
-| **7**  | [**aplicación     **](https://es.wikipedia.org/wiki/Capa_de_aplicaci%C3%B3n) | servicios para aplicaciones de usuario finales |  
+| **4**  | [**transporte**](https://es.wikipedia.org/wiki/Capa_de_transporte) | control de flujo y la corrección de errores (entre otros) |  
+| **5**  | [**sesión**](https://es.wikipedia.org/wiki/Capa_de_sesi%C3%B3n) | establecimiento, mantenimiento y control de sesiones  |  
+| **6**  | [**presentación**](https://es.wikipedia.org/wiki/Capa_de_presentaci%C3%B3n) | codificación, decodificación, compresión y cifrado de datos |  
+| **7**  | [**aplicación**](https://es.wikipedia.org/wiki/Capa_de_aplicaci%C3%B3n) | servicios para aplicaciones de usuario finales |  
 
 ---
 
