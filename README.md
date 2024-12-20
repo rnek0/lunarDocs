@@ -27,8 +27,8 @@ Check version :
 
 ```bash
 $ pip list | grep material
-mkdocs-material               9.1.9
-mkdocs-material-extensions    1.1.1
+mkdocs-material            9.5.49
+mkdocs-material-extensions 1.3.1
 ```
 
 ## Clone lunarDocs
