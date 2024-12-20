@@ -82,6 +82,8 @@ extra:
 # Navigation
 nav:
     - lunarviews: index.md
+    - 'THM':
+      - 'Day 8': 'tryhackme/day8.md'
     - 'HTB Starting':
       - Meow: 'tiers0/meow.md'
       - Fawn: 'tiers0/fawn.md'
