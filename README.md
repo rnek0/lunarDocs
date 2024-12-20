@@ -4,6 +4,19 @@ H4ck3r public mkdocs with [Material for MkDocs](https://squidfunk.github.io/mkdo
 
 Just learning about machines.
 
+
+## Make a virtual env on win OS
+
+```
+python.exe -m venv env
+```
+
+!["Activate"](./activate.png)
+
+- To activate : \env\Scripts\activate
+- To deactivate: \env\Scripts\deactivate.bat
+- To delete : simply delete the folder 
+
 ## Install material
 
 ```bash
