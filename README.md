@@ -31,6 +31,9 @@ mkdocs-material            9.5.49
 mkdocs-material-extensions 1.3.1
 ```
 
+**WARNING :**
+> Upgrade mkdocs-material like this : `pip install --upgrade --force-reinstall mkdocs-material`
+
 ## Clone lunarDocs
 
 ```bash

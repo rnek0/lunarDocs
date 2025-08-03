@@ -51,10 +51,10 @@ Voici mes choix du moment, toujours en [Markdown](https://daringfireball.net/pro
 
 Pour les blogs ou docs en ligne :
 
-* **Jekyll** (*Python*) avec md pour un blog simple <https://web.lunarviews.net>
+* **Jekyll** (*Ruby*) avec md pour mon ancien blog, qui a sauté car trop dependent de la forge qui l'hébergeait.
 * **Hugo** (*Go*) avec md pour un blog simple 
     * Mon blog Hugo est en travaux (pas disponible)
-* **Material for MkDocs** (*Python*) <https://rnek0.github.io/lunarDocs/>
+* **Material for MkDocs** (*Python*) <https://rnek0.github.io/lunarDocs/> ; c'est mon choix du moment.
 
 * **Jupyter notebooks** (*Python*) (intéressant car je peux générer des pdf à la volée)
     * Tests en lisant des tutos <https://github.com/rnek0/TSbook>  

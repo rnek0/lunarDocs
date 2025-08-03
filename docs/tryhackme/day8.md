@@ -98,3 +98,6 @@ On lance netcat pour se mettre à l'écoute et on va envoyer les trois commandes
 
 Ce qui est interessant est que si je mets le code en image dans VScode en editant mon fichier markdown, mon fichier est automatiquement éffacé.
 
+## Pour approfondir
+
+Pour apprendre un peu plus sur les techniques d'obfucation il y a la salle [AV Evasion: Shellcode](https://tryhackme.com/r/room/avevasionshellcode)
